@@ -1,0 +1,166 @@
+/* ==================== PAINEL PERFIL DA DOADORA ==================== */
+
+.blh-perfil-panel {
+  position: fixed;
+  top: 0;
+  right: -380px;
+  width: 360px;
+  height: 100vh;
+  background: #ffffff;
+  box-shadow: -4px 0 20px rgba(0, 0, 0, 0.08);
+  z-index: 1000;
+  transition: right 0.35s ease;
+  overflow-y: auto;
+  border-radius: 16px 0 0 16px;
+}
+
+.blh-perfil-panel--aberto {
+  right: 0;
+}
+
+/* Header do painel */
+.blh-perfil-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 24px 16px;
+  border-bottom: 1px solid var(--blh-border);
+}
+
+.blh-perfil-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--blh-text);
+  margin: 0;
+}
+
+.blh-perfil-close {
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: var(--blh-text-light);
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 8px;
+  transition: background 0.2s ease;
+}
+
+.blh-perfil-close:hover {
+  background: var(--blh-bg);
+  color: var(--blh-text);
+}
+
+/* Conteúdo do painel */
+.blh-perfil-content {
+  padding: 24px;
+}
+
+/* Avatar */
+.blh-perfil-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #e8f4f8 0%, #d4e9f2 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.blh-perfil-avatar i {
+  font-size: 20px;
+  color: var(--blh-primary);
+}
+
+/* Nome e ID */
+.blh-perfil-nome {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--blh-text);
+  margin-bottom: 4px;
+}
+
+.blh-perfil-id {
+  font-size: 13px;
+  color: var(--blh-text-light);
+  margin-bottom: 24px;
+}
+
+/* Dados em linhas */
+.blh-perfil-dados {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.blh-perfil-linha {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.blh-perfil-label {
+  font-size: 14px;
+  color: var(--blh-text-light);
+  font-weight: 500;
+}
+
+.blh-perfil-valor {
+  font-size: 14px;
+  color: var(--blh-text);
+  font-weight: 600;
+}
+
+/* Status no painel */
+.blh-perfil-linha .blh-status-tag {
+  font-size: 12px;
+  padding: 4px 12px;
+}
+
+/* Observações */
+.blh-perfil-obs {
+  padding-top: 16px;
+  border-top: 1px solid var(--blh-border);
+}
+
+.blh-perfil-obs .blh-perfil-label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.blh-perfil-obs-texto {
+  font-size: 14px;
+  color: var(--blh-text);
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Overlay escuro quando painel aberto */
+.blh-perfil-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 999;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.blh-perfil-overlay--ativo {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Linha selecionada na tabela */
+.blh-donor-row {
+  cursor: pointer;
+}
+
+.blh-donor-row--selecionada {
+  background-color: #f0f7ff !important;
+  border-left: 4px solid var(--blh-primary) !important;
+}

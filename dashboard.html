@@ -1,102 +1,112 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BLH Marília - Dashboard</title>
+    <link rel="stylesheet" href="assets/coletasdom.css">
     <link rel="stylesheet" href="assets/dashboard.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<base target="_blank">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <base target="_blank">
 </head>
+
 <body class="blh-dashboard-body">
 
-    <!-- ================= SIDEBAR ================= -->
-    <aside class="blh-dashboard-sidebar" role="complementary" aria-label="Menu de navegação">
-        <header class="blh-dashboard-sidebar-header">
-            <div class="blh-dashboard-sidebar-brand">
-                <img class="blh-dashboard-sidebar-logo" src="assets/img/img-logo.jpg" alt="Logo BLH Marília">
-                <div class="blh-dashboard-sidebar-brand-text">
-                    <h1 class="blh-dashboard-sidebar-title">BLH Marília</h1>
-                    <p class="blh-dashboard-sidebar-subtitle">Sistema de Gestão</p>
+    <aside class="blh-sidebar">
+        <div>
+            <!-- LOGO -->
+            <header class="blh-sidebar-header">
+                <div class="blh-brand">
+                    <div class="blh-brand-icon">
+                        <i class="fa-solid fa-user-doctor"></i>
+                    </div>
+                    <div class="blh-brand-text">
+                        <h1>BLH Marília</h1>
+                        <span>Sistema de Gestão</span>
+                    </div>
+                </div>
+            </header>
+            <!-- MENU -->
+            <nav class="blh-sidebar-nav">
+                <ul class="blh-sidebar-menu">
+                    <li>
+                        <a class="blh-sidebar-link active" href="dashboard.html">
+                            <i class="fa-solid fa-table-columns"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="blh-sidebar-link" href="doadoras.html">
+                            <i class="fa-regular fa-heart"></i>
+                            <span>Doadoras</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="blh-sidebar-link" href="coletasdom.html">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <span>Coletas Domiciliares</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="blh-sidebar-link" href="#">
+                            <i class="fa-solid fa-flask"></i>
+                            <span>Pasteurização</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="blh-sidebar-link" href="#">
+                            <i class="fa-solid fa-cube"></i>
+                            <span>Estoque de Leite</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="blh-sidebar-link" href="#">
+                            <i class="fa-regular fa-clipboard"></i>
+                            <span>Solicitações</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="blh-sidebar-link" href="#">
+                            <i class="fa-solid fa-truck"></i>
+                            <span>Entregas</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="blh-sidebar-link" href="#">
+                            <i class="fa-solid fa-code-branch"></i>
+                            <span>Rastreabilidade</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="blh-sidebar-link" href="#">
+                            <i class="fa-solid fa-chart-column"></i>
+                            <span>Relatórios</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="blh-sidebar-link" href="#">
+                            <i class="fa-solid fa-gear"></i>
+                            <span>Configurações</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <!-- FOOTER -->
+        <footer class="blh-sidebar-footer">
+            <div class="blh-user">
+                <div class="blh-user-avatar">
+                    <i class="fa-solid fa-user"></i>
+                </div>
+                <div class="blh-user-info">
+                    <strong>Dra. Ana Carvalho</strong>
+                    <span>Nutricionista</span>
                 </div>
             </div>
-        </header>
-
-        <nav class="blh-dashboard-sidebar-nav" role="navigation" aria-label="Menu principal">
-            <ul class="blh-dashboard-sidebar-menu">
-                <li class="blh-dashboard-sidebar-item blh-dashboard-sidebar-item--active">
-                    <a href="#" class="blh-dashboard-sidebar-link" aria-current="page">
-                        <span class="blh-dashboard-sidebar-icon blh-dashboard-icon--dashboard" aria-hidden="true"></span>
-                        <span class="blh-dashboard-sidebar-label">Dashboard</span>
-                    </a>
-                </li>
-                <li class="blh-dashboard-sidebar-item">
-                    <a href="#" class="blh-dashboard-sidebar-link">
-                        <span class="blh-dashboard-sidebar-icon blh-dashboard-icon--doadoras" aria-hidden="true"></span>
-                        <span class="blh-dashboard-sidebar-label">Doadoras</span>
-                    </a>
-                </li>
-                <li class="blh-dashboard-sidebar-item">
-                    <a href="#" class="blh-dashboard-sidebar-link">
-                        <span class="blh-dashboard-sidebar-icon blh-dashboard-icon--coletas" aria-hidden="true"></span>
-                        <span class="blh-dashboard-sidebar-label">Coletas Domiciliares</span>
-                    </a>
-                </li>
-                <li class="blh-dashboard-sidebar-item">
-                    <a href="#" class="blh-dashboard-sidebar-link">
-                        <span class="blh-dashboard-sidebar-icon blh-dashboard-icon--pasteurizacao" aria-hidden="true"></span>
-                        <span class="blh-dashboard-sidebar-label">Pasteurização</span>
-                    </a>
-                </li>
-                <li class="blh-dashboard-sidebar-item">
-                    <a href="#" class="blh-dashboard-sidebar-link">
-                        <span class="blh-dashboard-sidebar-icon blh-dashboard-icon--estoque" aria-hidden="true"></span>
-                        <span class="blh-dashboard-sidebar-label">Estoque de Leite</span>
-                    </a>
-                </li>
-                <li class="blh-dashboard-sidebar-item">
-                    <a href="#" class="blh-dashboard-sidebar-link">
-                        <span class="blh-dashboard-sidebar-icon blh-dashboard-icon--solicitacoes" aria-hidden="true"></span>
-                        <span class="blh-dashboard-sidebar-label">Solicitações</span>
-                    </a>
-                </li>
-                <li class="blh-dashboard-sidebar-item">
-                    <a href="#" class="blh-dashboard-sidebar-link">
-                        <span class="blh-dashboard-sidebar-icon blh-dashboard-icon--entregas" aria-hidden="true"></span>
-                        <span class="blh-dashboard-sidebar-label">Entregas</span>
-                    </a>
-                </li>
-                <li class="blh-dashboard-sidebar-item">
-                    <a href="#" class="blh-dashboard-sidebar-link">
-                        <span class="blh-dashboard-sidebar-icon blh-dashboard-icon--rastreabilidade" aria-hidden="true"></span>
-                        <span class="blh-dashboard-sidebar-label">Rastreabilidade</span>
-                    </a>
-                </li>
-                <li class="blh-dashboard-sidebar-item">
-                    <a href="#" class="blh-dashboard-sidebar-link">
-                        <span class="blh-dashboard-sidebar-icon blh-dashboard-icon--relatorios" aria-hidden="true"></span>
-                        <span class="blh-dashboard-sidebar-label">Relatórios</span>
-                    </a>
-                </li>
-                <li class="blh-dashboard-sidebar-item">
-                    <a href="#" class="blh-dashboard-sidebar-link">
-                        <span class="blh-dashboard-sidebar-icon blh-dashboard-icon--configuracoes" aria-hidden="true"></span>
-                        <span class="blh-dashboard-sidebar-label">Configurações</span>
-                    </a>
-                </li>
-            </ul>
-        </nav>
-
-        <footer class="blh-dashboard-sidebar-footer">
-            <div class="blh-dashboard-user-profile">
-                <img class="blh-dashboard-user-avatar" src="assets/img/doctor.png" alt="Avatar da Dra. Ana Carvalho">
-                <div class="blh-dashboard-user-info">
-                    <p class="blh-dashboard-user-name">Dra. Ana Carvalho</p>
-                    <p class="blh-dashboard-user-role">Nutricionista</p>
-                </div>
-            </div>
-            <a href="index.html" class="blh-dashboard-logout-link">
-                <span class="blh-dashboard-logout-icon" aria-hidden="true"></span>
+            <a class="blh-logout" href="index.html">
+                <i class="fa-solid fa-arrow-right-from-bracket"></i>
                 <span>Sair do sistema</span>
             </a>
         </footer>
@@ -166,7 +176,8 @@
                 <article class="blh-dashboard-kpi-card">
                     <div class="blh-dashboard-kpi-card-content">
                         <div class="blh-dashboard-kpi-icon-wrapper blh-dashboard-kpi-icon--pasteurizados">
-                            <img class="blh-dashboard-kpi-icon" src="assets/img/frasco.png" alt="Ícone frascos pasteurizados">
+                            <img class="blh-dashboard-kpi-icon" src="assets/img/frasco.png"
+                                alt="Ícone frascos pasteurizados">
                         </div>
                         <div class="blh-dashboard-kpi-data">
                             <p class="blh-dashboard-kpi-value">142</p>
@@ -230,7 +241,8 @@
                 <article class="blh-dashboard-kpi-card">
                     <div class="blh-dashboard-kpi-card-content">
                         <div class="blh-dashboard-kpi-icon-wrapper blh-dashboard-kpi-icon--reprovados">
-                            <img class="blh-dashboard-kpi-icon" src="assets/img/warning.png" alt="Ícone lotes reprovados">
+                            <img class="blh-dashboard-kpi-icon" src="assets/img/warning.png"
+                                alt="Ícone lotes reprovados">
                         </div>
                         <div class="blh-dashboard-kpi-data">
                             <p class="blh-dashboard-kpi-value">3</p>
@@ -246,7 +258,8 @@
                 <article class="blh-dashboard-kpi-card">
                     <div class="blh-dashboard-kpi-card-content">
                         <div class="blh-dashboard-kpi-icon-wrapper blh-dashboard-kpi-icon--volume">
-                            <img class="blh-dashboard-kpi-icon" src="assets/img/batida-de-coracao.png" alt="Ícone volume">
+                            <img class="blh-dashboard-kpi-icon" src="assets/img/batida-de-coracao.png"
+                                alt="Ícone volume">
                         </div>
                         <div class="blh-dashboard-kpi-data">
                             <p class="blh-dashboard-kpi-value">38,4 <span class="blh-dashboard-kpi-unit">L</span></p>
@@ -271,7 +284,8 @@
                     </header>
                     <div class="blh-dashboard-chart-body">
                         <div class="blh-dashboard-chart-wrapper">
-                            <canvas id="blh-dashboard-chart-estoque" aria-label="Gráfico de estoque por tipo de leite"></canvas>
+                            <canvas id="blh-dashboard-chart-estoque"
+                                aria-label="Gráfico de estoque por tipo de leite"></canvas>
                         </div>
                         <div class="blh-dashboard-chart-legend" id="blh-dashboard-legend-estoque">
                             <!-- Legend items gerados via JS -->
@@ -304,27 +318,32 @@
                     </header>
                     <ul class="blh-dashboard-list-items">
                         <li class="blh-dashboard-list-item">
-                            <span class="blh-dashboard-list-status blh-dashboard-list-status--done" aria-label="Concluído"></span>
+                            <span class="blh-dashboard-list-status blh-dashboard-list-status--done"
+                                aria-label="Concluído"></span>
                             <span class="blh-dashboard-list-day">Segunda</span>
                             <span class="blh-dashboard-list-zone">Zona Norte</span>
                         </li>
                         <li class="blh-dashboard-list-item">
-                            <span class="blh-dashboard-list-status blh-dashboard-list-status--done" aria-label="Concluído"></span>
+                            <span class="blh-dashboard-list-status blh-dashboard-list-status--done"
+                                aria-label="Concluído"></span>
                             <span class="blh-dashboard-list-day">Terça</span>
                             <span class="blh-dashboard-list-zone">Zona Sul</span>
                         </li>
                         <li class="blh-dashboard-list-item blh-dashboard-list-item--active">
-                            <span class="blh-dashboard-list-status blh-dashboard-list-status--active" aria-label="Em andamento"></span>
+                            <span class="blh-dashboard-list-status blh-dashboard-list-status--active"
+                                aria-label="Em andamento"></span>
                             <span class="blh-dashboard-list-day">Quarta</span>
                             <span class="blh-dashboard-list-zone">Zona Oeste</span>
                         </li>
                         <li class="blh-dashboard-list-item">
-                            <span class="blh-dashboard-list-status blh-dashboard-list-status--pending" aria-label="Pendente"></span>
+                            <span class="blh-dashboard-list-status blh-dashboard-list-status--pending"
+                                aria-label="Pendente"></span>
                             <span class="blh-dashboard-list-day">Quinta</span>
                             <span class="blh-dashboard-list-zone">Zona Leste</span>
                         </li>
                         <li class="blh-dashboard-list-item">
-                            <span class="blh-dashboard-list-status blh-dashboard-list-status--pending" aria-label="Pendente"></span>
+                            <span class="blh-dashboard-list-status blh-dashboard-list-status--pending"
+                                aria-label="Pendente"></span>
                             <span class="blh-dashboard-list-day">Sexta</span>
                             <span class="blh-dashboard-list-zone">Zona Rural</span>
                         </li>
@@ -346,15 +365,18 @@
                             <span class="blh-dashboard-list-badge blh-dashboard-list-badge--done">Entregue</span>
                         </li>
                         <li class="blh-dashboard-list-item blh-dashboard-list-item--delivery">
-                            <span class="blh-dashboard-list-dot blh-dashboard-list-dot--transit" aria-hidden="true"></span>
+                            <span class="blh-dashboard-list-dot blh-dashboard-list-dot--transit"
+                                aria-hidden="true"></span>
                             <div class="blh-dashboard-list-delivery-info">
                                 <p class="blh-dashboard-list-delivery-name">HC – Marília</p>
                                 <p class="blh-dashboard-list-delivery-detail">8 frascos - Saída 09:00</p>
                             </div>
-                            <span class="blh-dashboard-list-badge blh-dashboard-list-badge--transit">Em Transporte</span>
+                            <span class="blh-dashboard-list-badge blh-dashboard-list-badge--transit">Em
+                                Transporte</span>
                         </li>
                         <li class="blh-dashboard-list-item blh-dashboard-list-item--delivery">
-                            <span class="blh-dashboard-list-dot blh-dashboard-list-dot--pending" aria-hidden="true"></span>
+                            <span class="blh-dashboard-list-dot blh-dashboard-list-dot--pending"
+                                aria-hidden="true"></span>
                             <div class="blh-dashboard-list-delivery-info">
                                 <p class="blh-dashboard-list-delivery-name">UPA Zona Norte</p>
                                 <p class="blh-dashboard-list-delivery-detail">2 frascos - Saída 11:00</p>
@@ -362,7 +384,8 @@
                             <span class="blh-dashboard-list-badge blh-dashboard-list-badge--pending">Pendente</span>
                         </li>
                         <li class="blh-dashboard-list-item blh-dashboard-list-item--delivery">
-                            <span class="blh-dashboard-list-dot blh-dashboard-list-dot--pending" aria-hidden="true"></span>
+                            <span class="blh-dashboard-list-dot blh-dashboard-list-dot--pending"
+                                aria-hidden="true"></span>
                             <div class="blh-dashboard-list-delivery-info">
                                 <p class="blh-dashboard-list-delivery-name">Santa Casa – Maternidade</p>
                                 <p class="blh-dashboard-list-delivery-detail">4 frascos - Saída 13:00</p>
@@ -379,7 +402,8 @@
                     </header>
                     <ul class="blh-dashboard-list-items">
                         <li class="blh-dashboard-list-item blh-dashboard-list-item--request">
-                            <span class="blh-dashboard-list-priority blh-dashboard-list-priority--high" aria-label="Alta prioridade"></span>
+                            <span class="blh-dashboard-list-priority blh-dashboard-list-priority--high"
+                                aria-label="Alta prioridade"></span>
                             <div class="blh-dashboard-list-request-info">
                                 <p class="blh-dashboard-list-request-name">Pedro Henrique M.</p>
                                 <p class="blh-dashboard-list-request-detail">Santa Casa de Misericórdia</p>
@@ -387,7 +411,8 @@
                             <span class="blh-dashboard-list-badge blh-dashboard-list-badge--high">Alta</span>
                         </li>
                         <li class="blh-dashboard-list-item blh-dashboard-list-item--request">
-                            <span class="blh-dashboard-list-priority blh-dashboard-list-priority--normal" aria-label="Prioridade normal"></span>
+                            <span class="blh-dashboard-list-priority blh-dashboard-list-priority--normal"
+                                aria-label="Prioridade normal"></span>
                             <div class="blh-dashboard-list-request-info">
                                 <p class="blh-dashboard-list-request-name">Laura Beatriz S.</p>
                                 <p class="blh-dashboard-list-request-detail">Hospital das Clínicas – Marília</p>
@@ -395,7 +420,8 @@
                             <span class="blh-dashboard-list-badge blh-dashboard-list-badge--normal">Normal</span>
                         </li>
                         <li class="blh-dashboard-list-item blh-dashboard-list-item--request">
-                            <span class="blh-dashboard-list-priority blh-dashboard-list-priority--normal" aria-label="Prioridade normal"></span>
+                            <span class="blh-dashboard-list-priority blh-dashboard-list-priority--normal"
+                                aria-label="Prioridade normal"></span>
                             <div class="blh-dashboard-list-request-info">
                                 <p class="blh-dashboard-list-request-name">Isabela F. C.</p>
                                 <p class="blh-dashboard-list-request-detail">Santa Casa de Misericórdia</p>
@@ -411,4 +437,5 @@
 
     <script src="assets/js/dashboard.js"></script>
 </body>
+
 </html>

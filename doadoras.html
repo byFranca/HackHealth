@@ -1,10 +1,14 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>BLH Marília - Doadoras</title>
+  <link rel="stylesheet" href="assets/coletasdom.css">
   <link rel="stylesheet" href="assets/doadoras.css">
+  <link rel="stylesheet" href="assets/perfil-doadora.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 
 
 </head>
@@ -13,92 +17,102 @@
 
   <div class="blh-dashboard-layout">
 
-    <!-- SIDEBAR -->
     <aside class="blh-sidebar">
-
-      <div class="blh-sidebar-top">
-
-        <div class="blh-logo-area">
-          <div class="blh-logo-image"></div>
-
-          <div class="blh-logo-text">
-            <h1>BLH Marília</h1>
-            <p>Sistema de Gestão</p>
+      <div>
+        <!-- LOGO -->
+        <header class="blh-sidebar-header">
+          <div class="blh-brand">
+            <div class="blh-brand-icon">
+              <i class="fa-solid fa-user-doctor"></i>
+            </div>
+            <div class="blh-brand-text">
+              <h1>BLH Marília</h1>
+              <span>Sistema de Gestão</span>
+            </div>
           </div>
-        </div>
-
+        </header>
+        <!-- MENU -->
         <nav class="blh-sidebar-nav">
-
-          <a href="#" class="blh-nav-item">
-            <img src="assets/imgs/dashboard.png" alt="imgdashboardf">
-            <span class="blh-nav-text">Dashboard</span>
-          </a>
-
-          <a href="#" class="blh-nav-item blh-nav-item--active">
-            <div class="blh-nav-icon"></div>
-            <span class="blh-nav-text">Doadoras</span>
-          </a>
-
-          <a href="#" class="blh-nav-item">
-            <div class="blh-nav-icon"></div>
-            <span class="blh-nav-text">Coletas Domiciliares</span>
-          </a>
-
-          <a href="#" class="blh-nav-item">
-            <div class="blh-nav-icon"></div>
-            <span class="blh-nav-text">Pasteurização</span>
-          </a>
-
-          <a href="#" class="blh-nav-item">
-            <div class="blh-nav-icon"></div>
-            <span class="blh-nav-text">Estoque de Leite</span>
-          </a>
-
-          <a href="#" class="blh-nav-item">
-            <div class="blh-nav-icon"></div>
-            <span class="blh-nav-text">Solicitações</span>
-          </a>
-
-          <a href="#" class="blh-nav-item">
-            <div class="blh-nav-icon"></div>
-            <span class="blh-nav-text">Entregas</span>
-          </a>
-
-          <a href="#" class="blh-nav-item blh-nav-item--orange">
-            <div class="blh-nav-icon"></div>
-            <span class="blh-nav-text">Rastreabilidade</span>
-          </a>
-
-          <a href="#" class="blh-nav-item">
-            <div class="blh-nav-icon"></div>
-            <span class="blh-nav-text">Relatórios</span>
-          </a>
-
-          <a href="#" class="blh-nav-item">
-            <div class="blh-nav-icon"></div>
-            <span class="blh-nav-text">Configurações</span>
-          </a>
-
+          <ul class="blh-sidebar-menu">
+            <li>
+              <a class="blh-sidebar-link " href="dashboard.html">
+                <i class="fa-solid fa-table-columns"></i>
+                <span>Dashboard</span>
+              </a>
+            </li>
+            <li>
+              <a class="blh-sidebar-link active" href="doadoras.html">
+                <i class="fa-regular fa-heart"></i>
+                <span>Doadoras</span>
+              </a>
+            </li>
+            <li>
+              <a class="blh-sidebar-link" href="coletasdom.html">
+                <i class="fa-solid fa-location-dot"></i>
+                <span>Coletas Domiciliares</span>
+              </a>
+            </li>
+            <li>
+              <a class="blh-sidebar-link" href="#">
+                <i class="fa-solid fa-flask"></i>
+                <span>Pasteurização</span>
+              </a>
+            </li>
+            <li>
+              <a class="blh-sidebar-link" href="#">
+                <i class="fa-solid fa-cube"></i>
+                <span>Estoque de Leite</span>
+              </a>
+            </li>
+            <li>
+              <a class="blh-sidebar-link" href="#">
+                <i class="fa-regular fa-clipboard"></i>
+                <span>Solicitações</span>
+              </a>
+            </li>
+            <li>
+              <a class="blh-sidebar-link" href="#">
+                <i class="fa-solid fa-truck"></i>
+                <span>Entregas</span>
+              </a>
+            </li>
+            <li>
+              <a class="blh-sidebar-link" href="#">
+                <i class="fa-solid fa-code-branch"></i>
+                <span>Rastreabilidade</span>
+              </a>
+            </li>
+            <li>
+              <a class="blh-sidebar-link" href="#">
+                <i class="fa-solid fa-chart-column"></i>
+                <span>Relatórios</span>
+              </a>
+            </li>
+            <li>
+              <a class="blh-sidebar-link" href="#">
+                <i class="fa-solid fa-gear"></i>
+                <span>Configurações</span>
+              </a>
+            </li>
+          </ul>
         </nav>
       </div>
-
-      <div class="blh-sidebar-bottom">
-
-        <div class="blh-user-card">
-          <div class="blh-user-avatar"></div>
-
+      <!-- FOOTER -->
+      <footer class="blh-sidebar-footer">
+        <div class="blh-user">
+          <div class="blh-user-avatar">
+            <i class="fa-solid fa-user"></i>
+          </div>
           <div class="blh-user-info">
-            <h2>Dra. Ana Carvalho</h2>
-            <p>Nutricionista</p>
+            <strong>Dra. Ana Carvalho</strong>
+            <span>Nutricionista</span>
           </div>
         </div>
-
-        <a href="#" class="blh-logout-button">
-          <div class="blh-nav-icon"></div>
+        <a class="blh-logout" href="index.html">
+          <i class="fa-solid fa-arrow-right-from-bracket"></i>
           <span>Sair do sistema</span>
         </a>
-
-      </div>
+      </footer>
     </aside>
 
     <!-- MAIN -->
@@ -121,11 +135,7 @@
       <section class="blh-filters-section">
 
         <div class="blh-search-wrapper">
-          <input
-            type="text"
-            class="blh-search-input"
-            placeholder="Buscar doadora..."
-          />
+          <input type="text" class="blh-search-input" placeholder="Buscar doadora..." />
         </div>
 
         <select class="blh-filter-select">
@@ -314,6 +324,11 @@
       console.log("Buscando:", searchInput.value);
     });
   </script>
+  <script src="assets/js/dataDoadoras.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", initFiltros);
+  </script>
 
 </body>
+
 </html>

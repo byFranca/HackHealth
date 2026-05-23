@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BLH Marília — Login</title>
+    <link rel="stylesheet" href="assets/login.css">
+<base target="_blank">
+</head>
+<body class="blh-login-body">
+
+    <div class="blh-login-wrapper">
+
+        <!-- Painel Esquerdo: Branding -->
+        <section class="blh-login-branding" aria-label="Informações do sistema">
+
+            <header class="blh-login-brand-header">
+                <div class="blh-login-logo">
+                    <!-- Substitua pelo src da sua logo -->
+                    <img src="" alt="Logo Banco de Leite Humano de Marília" class="blh-login-logo-img">
+                </div>
+                <div class="blh-login-brand-text">
+                    <h1 class="blh-login-brand-title">Banco de Leite Humano</h1>
+                    <p class="blh-login-brand-subtitle">de Marília – SP</p>
+                </div>
+            </header>
+
+            <div class="blh-login-tagline-wrapper">
+                <p class="blh-login-system-label">SISTEMA DE GESTÃO E RASTREABILIDADE</p>
+
+                <h2 class="blh-login-headline">
+                    Uma gente<br>
+                    humanitária que<br>
+                    <span class="blh-login-headline-highlight">alimenta esperança</span>
+                </h2>
+
+                <p class="blh-login-description">
+                    Controle completo da rastreabilidade do leite<br>
+                    humano — da doadora ao bebê receptor, com<br>
+                    segurança e transparência.
+                </p>
+            </div>
+
+            <div class="blh-login-stats">
+                <div class="blh-login-stat-item">
+                    <span class="blh-login-stat-number">47</span>
+                    <span class="blh-login-stat-label">Doadoras Ativas</span>
+                </div>
+                <div class="blh-login-stat-divider"></div>
+                <div class="blh-login-stat-item">
+                    <span class="blh-login-stat-number">183</span>
+                    <span class="blh-login-stat-label">Frascos Coletados</span>
+                </div>
+                <div class="blh-login-stat-divider"></div>
+                <div class="blh-login-stat-item">
+                    <span class="blh-login-stat-number">142</span>
+                    <span class="blh-login-stat-label">Pasteurizados</span>
+                </div>
+            </div>
+
+            <footer class="blh-login-footer">
+                <p class="blh-login-footer-text">BLH Marília · Sistema v2.41 · © 2024 HCRP Marília</p>
+            </footer>
+
+        </section>
+
+        <!-- Painel Direito: Formulário -->
+        <section class="blh-login-form-panel" aria-label="Formulário de login">
+
+            <div class="blh-login-form-card">
+
+                <header class="blh-login-form-header">
+                    <h2 class="blh-login-form-title">Bem-vindo de volta</h2>
+                    <p class="blh-login-form-subtitle">Faça login para acessar o sistema</p>
+                </header>
+
+                <form class="blh-login-form" action="#" method="POST" novalidate>
+
+                    <div class="blh-login-field-group">
+                        <label for="blh-perfil" class="blh-login-label">Perfil de acesso</label>
+                        <div class="blh-login-select-wrapper">
+                            <select id="blh-perfil" name="perfil" class="blh-login-select" required>
+                                <option value="administrador" selected>Administrador</option>
+                                <option value="nutricionista">Nutricionista</option>
+                                <option value="coletador">Coletador</option>
+                            </select>
+                            <svg class="blh-login-select-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                                <path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <div class="blh-login-field-group">
+                        <label for="blh-cpf-email" class="blh-login-label">CPF ou E-mail</label>
+                        <div class="blh-login-input-wrapper">
+                            <svg class="blh-login-input-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <circle cx="12" cy="7" r="4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <input 
+                                type="text" 
+                                id="blh-cpf-email" 
+                                name="login" 
+                                class="blh-login-input" 
+                                placeholder="000.000.000-00 ou email@exemplo.com"
+                                autocomplete="username"
+                                required
+                            >
+                        </div>
+                    </div>
+
+                    <div class="blh-login-field-group">
+                        <label for="blh-senha" class="blh-login-label">Senha</label>
+                        <div class="blh-login-input-wrapper">
+                            <svg class="blh-login-input-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                <rect x="3" y="11" width="18" height="11" rx="2" ry="2" stroke="currentColor" stroke-width="1.5"/>
+                                <path d="M7 11V7a5 5 0 0 1 10 0v4" stroke="currentColor" stroke-width="1.5"/>
+                            </svg>
+                            <input 
+                                type="password" 
+                                id="blh-senha" 
+                                name="senha" 
+                                class="blh-login-input" 
+                                placeholder="••••••••"
+                                autocomplete="current-password"
+                                required
+                            >
+                        </div>
+                    </div>
+
+                    <div class="blh-login-actions">
+                        <a href="#" class="blh-login-forgot-link">Esqueci minha senha</a>
+                    </div>
+
+                    <button type="submit" class="blh-login-submit-btn">
+                        Entrar no Sistema
+                    </button>
+
+                </form>
+
+            </div>
+
+            <footer class="blh-login-panel-footer">
+                <p>BLH Marília · Sistema de Gestão e Rastreabilidade</p>
+            </footer>
+
+        </section>
+
+    </div>
+
+    <script src="login.js"></script>
+</body>
+</html>

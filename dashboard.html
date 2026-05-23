@@ -1,12 +1,414 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>BLH Marília - Dashboard</title>
+    <link rel="stylesheet" href="assets/dashboard.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<base target="_blank">
 </head>
-<body>
-    ola mundo
-    
+<body class="blh-dashboard-body">
+
+    <!-- ================= SIDEBAR ================= -->
+    <aside class="blh-dashboard-sidebar" role="complementary" aria-label="Menu de navegação">
+        <header class="blh-dashboard-sidebar-header">
+            <div class="blh-dashboard-sidebar-brand">
+                <img class="blh-dashboard-sidebar-logo" src="assets/img/img-logo.jpg" alt="Logo BLH Marília">
+                <div class="blh-dashboard-sidebar-brand-text">
+                    <h1 class="blh-dashboard-sidebar-title">BLH Marília</h1>
+                    <p class="blh-dashboard-sidebar-subtitle">Sistema de Gestão</p>
+                </div>
+            </div>
+        </header>
+
+        <nav class="blh-dashboard-sidebar-nav" role="navigation" aria-label="Menu principal">
+            <ul class="blh-dashboard-sidebar-menu">
+                <li class="blh-dashboard-sidebar-item blh-dashboard-sidebar-item--active">
+                    <a href="#" class="blh-dashboard-sidebar-link" aria-current="page">
+                        <span class="blh-dashboard-sidebar-icon blh-dashboard-icon--dashboard" aria-hidden="true"></span>
+                        <span class="blh-dashboard-sidebar-label">Dashboard</span>
+                    </a>
+                </li>
+                <li class="blh-dashboard-sidebar-item">
+                    <a href="#" class="blh-dashboard-sidebar-link">
+                        <span class="blh-dashboard-sidebar-icon blh-dashboard-icon--doadoras" aria-hidden="true"></span>
+                        <span class="blh-dashboard-sidebar-label">Doadoras</span>
+                    </a>
+                </li>
+                <li class="blh-dashboard-sidebar-item">
+                    <a href="#" class="blh-dashboard-sidebar-link">
+                        <span class="blh-dashboard-sidebar-icon blh-dashboard-icon--coletas" aria-hidden="true"></span>
+                        <span class="blh-dashboard-sidebar-label">Coletas Domiciliares</span>
+                    </a>
+                </li>
+                <li class="blh-dashboard-sidebar-item">
+                    <a href="#" class="blh-dashboard-sidebar-link">
+                        <span class="blh-dashboard-sidebar-icon blh-dashboard-icon--pasteurizacao" aria-hidden="true"></span>
+                        <span class="blh-dashboard-sidebar-label">Pasteurização</span>
+                    </a>
+                </li>
+                <li class="blh-dashboard-sidebar-item">
+                    <a href="#" class="blh-dashboard-sidebar-link">
+                        <span class="blh-dashboard-sidebar-icon blh-dashboard-icon--estoque" aria-hidden="true"></span>
+                        <span class="blh-dashboard-sidebar-label">Estoque de Leite</span>
+                    </a>
+                </li>
+                <li class="blh-dashboard-sidebar-item">
+                    <a href="#" class="blh-dashboard-sidebar-link">
+                        <span class="blh-dashboard-sidebar-icon blh-dashboard-icon--solicitacoes" aria-hidden="true"></span>
+                        <span class="blh-dashboard-sidebar-label">Solicitações</span>
+                    </a>
+                </li>
+                <li class="blh-dashboard-sidebar-item">
+                    <a href="#" class="blh-dashboard-sidebar-link">
+                        <span class="blh-dashboard-sidebar-icon blh-dashboard-icon--entregas" aria-hidden="true"></span>
+                        <span class="blh-dashboard-sidebar-label">Entregas</span>
+                    </a>
+                </li>
+                <li class="blh-dashboard-sidebar-item">
+                    <a href="#" class="blh-dashboard-sidebar-link">
+                        <span class="blh-dashboard-sidebar-icon blh-dashboard-icon--rastreabilidade" aria-hidden="true"></span>
+                        <span class="blh-dashboard-sidebar-label">Rastreabilidade</span>
+                    </a>
+                </li>
+                <li class="blh-dashboard-sidebar-item">
+                    <a href="#" class="blh-dashboard-sidebar-link">
+                        <span class="blh-dashboard-sidebar-icon blh-dashboard-icon--relatorios" aria-hidden="true"></span>
+                        <span class="blh-dashboard-sidebar-label">Relatórios</span>
+                    </a>
+                </li>
+                <li class="blh-dashboard-sidebar-item">
+                    <a href="#" class="blh-dashboard-sidebar-link">
+                        <span class="blh-dashboard-sidebar-icon blh-dashboard-icon--configuracoes" aria-hidden="true"></span>
+                        <span class="blh-dashboard-sidebar-label">Configurações</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <footer class="blh-dashboard-sidebar-footer">
+            <div class="blh-dashboard-user-profile">
+                <img class="blh-dashboard-user-avatar" src="assets/img/doctor.png" alt="Avatar da Dra. Ana Carvalho">
+                <div class="blh-dashboard-user-info">
+                    <p class="blh-dashboard-user-name">Dra. Ana Carvalho</p>
+                    <p class="blh-dashboard-user-role">Nutricionista</p>
+                </div>
+            </div>
+            <a href="index.html" class="blh-dashboard-logout-link">
+                <span class="blh-dashboard-logout-icon" aria-hidden="true"></span>
+                <span>Sair do sistema</span>
+            </a>
+        </footer>
+    </aside>
+
+    <!-- ================= MAIN CONTENT ================= -->
+    <main class="blh-dashboard-main" role="main">
+
+        <!-- Header -->
+        <header class="blh-dashboard-page-header">
+            <div class="blh-dashboard-page-title-group">
+                <h2 class="blh-dashboard-page-title">Dashboard</h2>
+                <p class="blh-dashboard-page-subtitle">Banco de Leite Humano de Marília - 16 de maio de 2024</p>
+            </div>
+            <button class="blh-dashboard-notifications-btn" aria-label="Notificações">
+                <span class="blh-dashboard-notifications-badge" aria-label="3 notificações não lidas">3</span>
+                <img class="blh-dashboard-notifications-icon" src="" alt="Ícone de notificações">
+            </button>
+        </header>
+
+        <!-- Alertas -->
+        <section class="blh-dashboard-alerts" aria-label="Alertas do sistema">
+            <div class="blh-dashboard-alert blh-dashboard-alert--warning">
+                <span class="blh-dashboard-alert-icon" aria-hidden="true">⚠</span>
+                <span class="blh-dashboard-alert-text">Baixo estoque de Colostro (apenas 12 frascos)</span>
+            </div>
+        </section>
+
+        <!-- KPIs Cards -->
+        <section class="blh-dashboard-kpi-section" aria-label="Indicadores principais">
+            <div class="blh-dashboard-kpi-grid">
+
+                <!-- Card 1: Doadoras Ativas -->
+                <article class="blh-dashboard-kpi-card">
+                    <div class="blh-dashboard-kpi-card-content">
+                        <div class="blh-dashboard-kpi-icon-wrapper blh-dashboard-kpi-icon--doadoras">
+                            <img class="blh-dashboard-kpi-icon" src="assets/img/coracao.png" alt="Ícone doadoras">
+                        </div>
+                        <div class="blh-dashboard-kpi-data">
+                            <p class="blh-dashboard-kpi-value">47</p>
+                            <p class="blh-dashboard-kpi-label">Doadoras Ativas</p>
+                            <p class="blh-dashboard-kpi-trend blh-dashboard-kpi-trend--up">
+                                <span class="blh-dashboard-kpi-trend-icon" aria-hidden="true">↑</span>
+                                <span>3 este mês</span>
+                            </p>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 2: Frascos Coletados -->
+                <article class="blh-dashboard-kpi-card">
+                    <div class="blh-dashboard-kpi-card-content">
+                        <div class="blh-dashboard-kpi-icon-wrapper blh-dashboard-kpi-icon--coletados">
+                            <img class="blh-dashboard-kpi-icon" src="assets/img/gota.png" alt="Ícone frascos coletados">
+                        </div>
+                        <div class="blh-dashboard-kpi-data">
+                            <p class="blh-dashboard-kpi-value">183</p>
+                            <p class="blh-dashboard-kpi-label">Frascos Coletados</p>
+                            <p class="blh-dashboard-kpi-trend">
+                                <span>Este mês</span>
+                            </p>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 3: Frascos Pasteurizados -->
+                <article class="blh-dashboard-kpi-card">
+                    <div class="blh-dashboard-kpi-card-content">
+                        <div class="blh-dashboard-kpi-icon-wrapper blh-dashboard-kpi-icon--pasteurizados">
+                            <img class="blh-dashboard-kpi-icon" src="assets/img/frasco.png" alt="Ícone frascos pasteurizados">
+                        </div>
+                        <div class="blh-dashboard-kpi-data">
+                            <p class="blh-dashboard-kpi-value">142</p>
+                            <p class="blh-dashboard-kpi-label">Frascos Pasteurizados</p>
+                            <p class="blh-dashboard-kpi-trend">
+                                <span>77% do coletado</span>
+                            </p>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 4: Entregas Hoje -->
+                <article class="blh-dashboard-kpi-card">
+                    <div class="blh-dashboard-kpi-card-content">
+                        <div class="blh-dashboard-kpi-icon-wrapper blh-dashboard-kpi-icon--entregas">
+                            <img class="blh-dashboard-kpi-icon" src="assets/img/caminhao.png" alt="Ícone entregas">
+                        </div>
+                        <div class="blh-dashboard-kpi-data">
+                            <p class="blh-dashboard-kpi-value">8</p>
+                            <p class="blh-dashboard-kpi-label">Entregas Hoje</p>
+                            <p class="blh-dashboard-kpi-trend">
+                                <span>3 concluídas</span>
+                            </p>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 5: Solicitações Pendentes -->
+                <article class="blh-dashboard-kpi-card">
+                    <div class="blh-dashboard-kpi-card-content">
+                        <div class="blh-dashboard-kpi-icon-wrapper blh-dashboard-kpi-icon--solicitacoes">
+                            <img class="blh-dashboard-kpi-icon" src="assets/img/lista.png" alt="Ícone solicitações">
+                        </div>
+                        <div class="blh-dashboard-kpi-data">
+                            <p class="blh-dashboard-kpi-value">5</p>
+                            <p class="blh-dashboard-kpi-label">Solicitações Pendentes</p>
+                            <p class="blh-dashboard-kpi-trend blh-dashboard-kpi-trend--urgent">
+                                <span>2 urgentes</span>
+                            </p>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 6: Frascos em Estoque -->
+                <article class="blh-dashboard-kpi-card">
+                    <div class="blh-dashboard-kpi-card-content">
+                        <div class="blh-dashboard-kpi-icon-wrapper blh-dashboard-kpi-icon--estoque">
+                            <img class="blh-dashboard-kpi-icon" src="assets/img/box.png" alt="Ícone estoque">
+                        </div>
+                        <div class="blh-dashboard-kpi-data">
+                            <p class="blh-dashboard-kpi-value">142</p>
+                            <p class="blh-dashboard-kpi-label">Frascos em Estoque</p>
+                            <p class="blh-dashboard-kpi-trend">
+                                <span>Total disponível</span>
+                            </p>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 7: Lotes Reprovados -->
+                <article class="blh-dashboard-kpi-card">
+                    <div class="blh-dashboard-kpi-card-content">
+                        <div class="blh-dashboard-kpi-icon-wrapper blh-dashboard-kpi-icon--reprovados">
+                            <img class="blh-dashboard-kpi-icon" src="assets/img/warning.png" alt="Ícone lotes reprovados">
+                        </div>
+                        <div class="blh-dashboard-kpi-data">
+                            <p class="blh-dashboard-kpi-value">3</p>
+                            <p class="blh-dashboard-kpi-label">Lotes Reprovados</p>
+                            <p class="blh-dashboard-kpi-trend">
+                                <span>Este mês</span>
+                            </p>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 8: Volume Coletado -->
+                <article class="blh-dashboard-kpi-card">
+                    <div class="blh-dashboard-kpi-card-content">
+                        <div class="blh-dashboard-kpi-icon-wrapper blh-dashboard-kpi-icon--volume">
+                            <img class="blh-dashboard-kpi-icon" src="assets/img/batida-de-coracao.png" alt="Ícone volume">
+                        </div>
+                        <div class="blh-dashboard-kpi-data">
+                            <p class="blh-dashboard-kpi-value">38,4 <span class="blh-dashboard-kpi-unit">L</span></p>
+                            <p class="blh-dashboard-kpi-label">Volume Coletado</p>
+                            <p class="blh-dashboard-kpi-trend">
+                                <span>Este mês</span>
+                            </p>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Gráficos -->
+        <section class="blh-dashboard-charts-section" aria-label="Gráficos e estatísticas">
+            <div class="blh-dashboard-charts-grid">
+
+                <!-- Gráfico Donut: Estoque por Tipo -->
+                <article class="blh-dashboard-chart-card blh-dashboard-chart-card--donut">
+                    <header class="blh-dashboard-chart-header">
+                        <h3 class="blh-dashboard-chart-title">Estoque por Tipo de Leite</h3>
+                    </header>
+                    <div class="blh-dashboard-chart-body">
+                        <div class="blh-dashboard-chart-wrapper">
+                            <canvas id="blh-dashboard-chart-estoque" aria-label="Gráfico de estoque por tipo de leite"></canvas>
+                        </div>
+                        <div class="blh-dashboard-chart-legend" id="blh-dashboard-legend-estoque">
+                            <!-- Legend items gerados via JS -->
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Gráfico Barras: Coletas da Semana -->
+                <article class="blh-dashboard-chart-card blh-dashboard-chart-card--bar">
+                    <header class="blh-dashboard-chart-header">
+                        <h3 class="blh-dashboard-chart-title">Coletas da Semana</h3>
+                    </header>
+                    <div class="blh-dashboard-chart-body">
+                        <div class="blh-dashboard-chart-wrapper">
+                            <canvas id="blh-dashboard-chart-coletas" aria-label="Gráfico de coletas da semana"></canvas>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Listas Inferiores -->
+        <section class="blh-dashboard-lists-section" aria-label="Listas de atividades">
+            <div class="blh-dashboard-lists-grid">
+
+                <!-- Rotas da Semana -->
+                <article class="blh-dashboard-list-card">
+                    <header class="blh-dashboard-list-header">
+                        <h3 class="blh-dashboard-list-title">Rotas da Semana</h3>
+                    </header>
+                    <ul class="blh-dashboard-list-items">
+                        <li class="blh-dashboard-list-item">
+                            <span class="blh-dashboard-list-status blh-dashboard-list-status--done" aria-label="Concluído"></span>
+                            <span class="blh-dashboard-list-day">Segunda</span>
+                            <span class="blh-dashboard-list-zone">Zona Norte</span>
+                        </li>
+                        <li class="blh-dashboard-list-item">
+                            <span class="blh-dashboard-list-status blh-dashboard-list-status--done" aria-label="Concluído"></span>
+                            <span class="blh-dashboard-list-day">Terça</span>
+                            <span class="blh-dashboard-list-zone">Zona Sul</span>
+                        </li>
+                        <li class="blh-dashboard-list-item blh-dashboard-list-item--active">
+                            <span class="blh-dashboard-list-status blh-dashboard-list-status--active" aria-label="Em andamento"></span>
+                            <span class="blh-dashboard-list-day">Quarta</span>
+                            <span class="blh-dashboard-list-zone">Zona Oeste</span>
+                        </li>
+                        <li class="blh-dashboard-list-item">
+                            <span class="blh-dashboard-list-status blh-dashboard-list-status--pending" aria-label="Pendente"></span>
+                            <span class="blh-dashboard-list-day">Quinta</span>
+                            <span class="blh-dashboard-list-zone">Zona Leste</span>
+                        </li>
+                        <li class="blh-dashboard-list-item">
+                            <span class="blh-dashboard-list-status blh-dashboard-list-status--pending" aria-label="Pendente"></span>
+                            <span class="blh-dashboard-list-day">Sexta</span>
+                            <span class="blh-dashboard-list-zone">Zona Rural</span>
+                        </li>
+                    </ul>
+                </article>
+
+                <!-- Últimas Entregas -->
+                <article class="blh-dashboard-list-card">
+                    <header class="blh-dashboard-list-header">
+                        <h3 class="blh-dashboard-list-title">Últimas Entregas</h3>
+                    </header>
+                    <ul class="blh-dashboard-list-items">
+                        <li class="blh-dashboard-list-item blh-dashboard-list-item--delivery">
+                            <span class="blh-dashboard-list-dot blh-dashboard-list-dot--done" aria-hidden="true"></span>
+                            <div class="blh-dashboard-list-delivery-info">
+                                <p class="blh-dashboard-list-delivery-name">Santa Casa de Misericórdia</p>
+                                <p class="blh-dashboard-list-delivery-detail">5 frascos - Saída 07:30</p>
+                            </div>
+                            <span class="blh-dashboard-list-badge blh-dashboard-list-badge--done">Entregue</span>
+                        </li>
+                        <li class="blh-dashboard-list-item blh-dashboard-list-item--delivery">
+                            <span class="blh-dashboard-list-dot blh-dashboard-list-dot--transit" aria-hidden="true"></span>
+                            <div class="blh-dashboard-list-delivery-info">
+                                <p class="blh-dashboard-list-delivery-name">HC – Marília</p>
+                                <p class="blh-dashboard-list-delivery-detail">8 frascos - Saída 09:00</p>
+                            </div>
+                            <span class="blh-dashboard-list-badge blh-dashboard-list-badge--transit">Em Transporte</span>
+                        </li>
+                        <li class="blh-dashboard-list-item blh-dashboard-list-item--delivery">
+                            <span class="blh-dashboard-list-dot blh-dashboard-list-dot--pending" aria-hidden="true"></span>
+                            <div class="blh-dashboard-list-delivery-info">
+                                <p class="blh-dashboard-list-delivery-name">UPA Zona Norte</p>
+                                <p class="blh-dashboard-list-delivery-detail">2 frascos - Saída 11:00</p>
+                            </div>
+                            <span class="blh-dashboard-list-badge blh-dashboard-list-badge--pending">Pendente</span>
+                        </li>
+                        <li class="blh-dashboard-list-item blh-dashboard-list-item--delivery">
+                            <span class="blh-dashboard-list-dot blh-dashboard-list-dot--pending" aria-hidden="true"></span>
+                            <div class="blh-dashboard-list-delivery-info">
+                                <p class="blh-dashboard-list-delivery-name">Santa Casa – Maternidade</p>
+                                <p class="blh-dashboard-list-delivery-detail">4 frascos - Saída 13:00</p>
+                            </div>
+                            <span class="blh-dashboard-list-badge blh-dashboard-list-badge--pending">Pendente</span>
+                        </li>
+                    </ul>
+                </article>
+
+                <!-- Solicitações Pendentes -->
+                <article class="blh-dashboard-list-card">
+                    <header class="blh-dashboard-list-header">
+                        <h3 class="blh-dashboard-list-title">Solicitações Pendentes</h3>
+                    </header>
+                    <ul class="blh-dashboard-list-items">
+                        <li class="blh-dashboard-list-item blh-dashboard-list-item--request">
+                            <span class="blh-dashboard-list-priority blh-dashboard-list-priority--high" aria-label="Alta prioridade"></span>
+                            <div class="blh-dashboard-list-request-info">
+                                <p class="blh-dashboard-list-request-name">Pedro Henrique M.</p>
+                                <p class="blh-dashboard-list-request-detail">Santa Casa de Misericórdia</p>
+                            </div>
+                            <span class="blh-dashboard-list-badge blh-dashboard-list-badge--high">Alta</span>
+                        </li>
+                        <li class="blh-dashboard-list-item blh-dashboard-list-item--request">
+                            <span class="blh-dashboard-list-priority blh-dashboard-list-priority--normal" aria-label="Prioridade normal"></span>
+                            <div class="blh-dashboard-list-request-info">
+                                <p class="blh-dashboard-list-request-name">Laura Beatriz S.</p>
+                                <p class="blh-dashboard-list-request-detail">Hospital das Clínicas – Marília</p>
+                            </div>
+                            <span class="blh-dashboard-list-badge blh-dashboard-list-badge--normal">Normal</span>
+                        </li>
+                        <li class="blh-dashboard-list-item blh-dashboard-list-item--request">
+                            <span class="blh-dashboard-list-priority blh-dashboard-list-priority--normal" aria-label="Prioridade normal"></span>
+                            <div class="blh-dashboard-list-request-info">
+                                <p class="blh-dashboard-list-request-name">Isabela F. C.</p>
+                                <p class="blh-dashboard-list-request-detail">Santa Casa de Misericórdia</p>
+                            </div>
+                            <span class="blh-dashboard-list-badge blh-dashboard-list-badge--normal">Normal</span>
+                        </li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="assets/js/dashboard.js"></script>
 </body>
 </html>

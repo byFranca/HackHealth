@@ -1,0 +1,507 @@
+    /* =====================================================
+       RESET
+    ====================================================== */
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    :root{
+
+      /* ==========================
+         PALETA
+      ========================== */
+
+      --blh-primary:#0f4c81;
+      --blh-primary-dark:#0b3d69;
+      --blh-primary-light:#2b6aa2;
+
+      --blh-background:#f3f5f9;
+      --blh-surface:#ffffff;
+
+      --blh-text:#1e293b;
+      --blh-text-light:#7b8794;
+
+      --blh-border:#e5e7eb;
+
+      --blh-success:#22c55e;
+      --blh-success-bg:#dcfce7;
+
+      --blh-warning:#f59e0b;
+      --blh-warning-bg:#fef3c7;
+
+      --blh-info:#2563eb;
+      --blh-info-bg:#dbeafe;
+
+      --blh-shadow:
+      0 2px 8px rgba(0,0,0,0.05);
+
+      --blh-radius:18px;
+
+      --blh-sidebar-width:240px;
+    }
+
+    body{
+      font-family:Arial, Helvetica, sans-serif;
+      background:var(--blh-background);
+      color:var(--blh-text);
+    }
+
+    /* =====================================================
+       LAYOUT PRINCIPAL
+    ====================================================== */
+
+    .blh-layout{
+      display:flex;
+      min-height:100vh;
+    }
+
+    /* =====================================================
+       SIDEBAR
+    ====================================================== */
+
+    .blh-sidebar{
+      width:var(--blh-sidebar-width);
+      background:var(--blh-primary);
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+      position:fixed;
+      top:0;
+      left:0;
+      bottom:0;
+    }
+
+    /* ======================================
+       LOGO
+    ====================================== */
+
+    .blh-sidebar-header{
+      padding:20px 16px;
+      border-bottom:1px solid rgba(255,255,255,0.08);
+    }
+
+    .blh-brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+    }
+
+    .blh-brand-icon{
+      width:36px;
+      height:36px;
+      border-radius:50%;
+      background:#fff;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color:var(--blh-primary);
+      font-size:18px;
+    }
+
+    .blh-brand-text h1{
+      font-size:18px;
+      color:#fff;
+      font-weight:700;
+    }
+
+    .blh-brand-text span{
+      color:rgba(255,255,255,0.7);
+      font-size:13px;
+    }
+
+    /* ======================================
+       MENU
+    ====================================== */
+
+    .blh-sidebar-nav{
+      padding-top:14px;
+    }
+
+    .blh-sidebar-menu{
+      list-style:none;
+    }
+
+    .blh-sidebar-menu li{
+      margin-bottom:4px;
+    }
+
+    .blh-sidebar-link{
+      display:flex;
+      align-items:center;
+      gap:14px;
+      padding:14px 20px;
+      text-decoration:none;
+      color:#dbe7f4;
+      font-size:15px;
+      font-weight:600;
+      transition:0.2s;
+      border-left:4px solid transparent;
+    }
+
+    .blh-sidebar-link:hover{
+      background:rgba(255,255,255,0.06);
+    }
+
+    .blh-sidebar-link.active{
+      background:rgba(255,255,255,0.08);
+      border-left:4px solid #ff9f43;
+      color:#fff;
+    }
+
+    /* ======================================
+       FOOTER SIDEBAR
+    ====================================== */
+
+    .blh-sidebar-footer{
+      padding:18px;
+      border-top:1px solid rgba(255,255,255,0.08);
+    }
+
+    .blh-user{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      margin-bottom:20px;
+    }
+
+    .blh-user-avatar{
+      width:40px;
+      height:40px;
+      border-radius:50%;
+      background:#f4a261;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color:#fff;
+    }
+
+    .blh-user-info strong{
+      color:#fff;
+      font-size:14px;
+    }
+
+    .blh-user-info span{
+      color:rgba(255,255,255,0.7);
+      font-size:12px;
+    }
+
+    .blh-logout{
+      color:#9ec5ff;
+      text-decoration:none;
+      font-weight:600;
+      display:flex;
+      gap:10px;
+      align-items:center;
+      font-size:14px;
+    }
+
+    /* =====================================================
+       MAIN
+    ====================================================== */
+
+    .blh-main{
+      margin-left:var(--blh-sidebar-width);
+      width:100%;
+      padding:20px;
+    }
+
+    /* =====================================================
+       HEADER
+    ====================================================== */
+
+    .blh-page-header{
+      display:flex;
+      align-items:flex-start;
+      justify-content:space-between;
+      margin-bottom:24px;
+    }
+
+    .blh-page-title{
+      font-size:38px;
+      font-weight:700;
+      margin-bottom:6px;
+    }
+
+    .blh-page-subtitle{
+      color:var(--blh-text-light);
+      font-size:15px;
+    }
+
+    .blh-temperature-indicator{
+      background:#fff;
+      padding:14px 20px;
+      border-radius:18px;
+      box-shadow:var(--blh-shadow);
+      display:flex;
+      align-items:center;
+      gap:10px;
+      font-weight:700;
+    }
+
+    /* =====================================================
+       CARD PADRÃO
+    ====================================================== */
+
+    .blh-card{
+      background:var(--blh-surface);
+      border-radius:var(--blh-radius);
+      box-shadow:var(--blh-shadow);
+      padding:22px;
+      margin-bottom:22px;
+    }
+
+    .blh-card-title{
+      font-size:20px;
+      font-weight:700;
+      margin-bottom:20px;
+    }
+
+    /* =====================================================
+       FORMULÁRIO TEMPERATURA
+    ====================================================== */
+
+    .blh-temperature-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:16px;
+    }
+
+    .blh-form-group{
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+
+    .blh-form-label{
+      font-size:14px;
+      color:var(--blh-text-light);
+      font-weight:600;
+    }
+
+    .blh-input-wrapper{
+      position:relative;
+    }
+
+    .blh-input-icon{
+      position:absolute;
+      left:14px;
+      top:50%;
+      transform:translateY(-50%);
+      color:#94a3b8;
+      font-size:14px;
+    }
+
+    .blh-input{
+      width:100%;
+      border:1px solid var(--blh-border);
+      border-radius:14px;
+      padding:14px 14px 14px 40px;
+      font-size:15px;
+      outline:none;
+      transition:0.2s;
+    }
+
+    .blh-input:focus{
+      border-color:var(--blh-primary);
+    }
+
+    /* =====================================================
+       AGENDA
+    ====================================================== */
+
+    .blh-agenda-header{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      margin-bottom:10px;
+    }
+
+    .blh-agenda-counter{
+      color:#94a3b8;
+      font-size:14px;
+      font-weight:600;
+    }
+
+    .blh-agenda-list{
+      list-style:none;
+    }
+
+    .blh-agenda-item{
+      display:grid;
+      grid-template-columns:
+      80px
+      50px
+      1fr
+      170px
+      100px
+      30px;
+
+      align-items:center;
+
+      gap:12px;
+
+      padding:18px 12px;
+      border-top:1px solid #edf2f7;
+
+      transition:0.2s;
+    }
+
+    .blh-agenda-item:hover{
+      background:#f8fafc;
+    }
+
+    .blh-agenda-item.active{
+      background:#eef5ff;
+    }
+
+    .blh-time{
+      font-weight:700;
+      color:var(--blh-primary);
+      text-align:center;
+      font-size:20px;
+    }
+
+    /* ======================================
+       STATUS ICON
+    ====================================== */
+
+    .blh-status-icon{
+      width:30px;
+      height:30px;
+      border-radius:50%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:13px;
+    }
+
+    .blh-status-success{
+      background:var(--blh-success-bg);
+      color:var(--blh-success);
+    }
+
+    .blh-status-info{
+      background:var(--blh-info);
+      color:#fff;
+    }
+
+    .blh-status-pending{
+      background:#f1f5f9;
+      color:#cbd5e1;
+    }
+
+    /* ======================================
+       CLIENTE
+    ====================================== */
+
+    .blh-client-name{
+      font-size:16px;
+      font-weight:700;
+      margin-bottom:6px;
+    }
+
+    .blh-client-address{
+      color:#94a3b8;
+      font-size:14px;
+      display:flex;
+      gap:8px;
+      align-items:center;
+    }
+
+    /* ======================================
+       BADGES
+    ====================================== */
+
+    .blh-badge{
+      padding:6px 14px;
+      border-radius:999px;
+      font-size:13px;
+      font-weight:700;
+      text-align:center;
+      display:inline-block;
+    }
+
+    .blh-badge-success{
+      background:var(--blh-success-bg);
+      color:#16a34a;
+    }
+
+    .blh-badge-warning{
+      background:var(--blh-warning-bg);
+      color:#d97706;
+    }
+
+    .blh-badge-info{
+      background:var(--blh-info-bg);
+      color:#2563eb;
+    }
+
+    /* ======================================
+       FRASCOS
+    ====================================== */
+
+    .blh-milk-info{
+      text-align:right;
+    }
+
+    .blh-milk-info strong{
+      display:block;
+      font-size:16px;
+    }
+
+    .blh-milk-info span{
+      color:#94a3b8;
+      font-size:13px;
+    }
+
+    .blh-arrow{
+      color:#cbd5e1;
+      font-size:14px;
+    }
+
+    /* =====================================================
+       RESPONSIVO
+    ====================================================== */
+
+    @media(max-width:1100px){
+
+      .blh-temperature-grid{
+        grid-template-columns:1fr;
+      }
+
+      .blh-agenda-item{
+        grid-template-columns:1fr;
+        text-align:left;
+      }
+
+      .blh-milk-info{
+        text-align:left;
+      }
+
+    }
+
+    @media(max-width:768px){
+
+      .blh-sidebar{
+        width:82px;
+      }
+
+      .blh-sidebar .blh-brand-text,
+      .blh-sidebar .blh-sidebar-link span,
+      .blh-sidebar .blh-user-info,
+      .blh-sidebar .blh-logout span{
+        display:none;
+      }
+
+      .blh-main{
+        margin-left:82px;
+      }
+
+      .blh-page-title{
+        font-size:28px;
+      }
+
+    }

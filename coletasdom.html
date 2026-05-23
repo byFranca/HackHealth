@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BLH Marília - Coleta Domiciliar</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Ícones -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  />
+    <link rel="stylesheet" href="assets/coletasdom.css">
+</head>
+
+<body>
+
+  <!-- =====================================================
+       LAYOUT
+  ====================================================== -->
+
+  <div class="blh-layout">
+
+    <!-- ===================================================
+         SIDEBAR
+    ==================================================== -->
+
+    <aside class="blh-sidebar">
+
+      <div>
+
+        <!-- LOGO -->
+        <header class="blh-sidebar-header">
+
+          <div class="blh-brand">
+
+            <div class="blh-brand-icon">
+              <i class="fa-solid fa-user-doctor"></i>
+            </div>
+
+            <div class="blh-brand-text">
+              <h1>BLH Marília</h1>
+              <span>Sistema de Gestão</span>
+            </div>
+
+          </div>
+
+        </header>
+
+        <!-- MENU -->
+        <nav class="blh-sidebar-nav">
+
+          <ul class="blh-sidebar-menu">
+
+            <li>
+              <a href="#" class="blh-sidebar-link">
+                <i class="fa-solid fa-table-columns"></i>
+                <span>Dashboard</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="blh-sidebar-link">
+                <i class="fa-regular fa-heart"></i>
+                <span>Doadoras</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="blh-sidebar-link active">
+                <i class="fa-solid fa-location-dot"></i>
+                <span>Coletas Domiciliares</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="blh-sidebar-link">
+                <i class="fa-solid fa-flask"></i>
+                <span>Pasteurização</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="blh-sidebar-link">
+                <i class="fa-solid fa-cube"></i>
+                <span>Estoque de Leite</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="blh-sidebar-link">
+                <i class="fa-regular fa-clipboard"></i>
+                <span>Solicitações</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="blh-sidebar-link">
+                <i class="fa-solid fa-truck"></i>
+                <span>Entregas</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="blh-sidebar-link">
+                <i class="fa-solid fa-code-branch"></i>
+                <span>Rastreabilidade</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="blh-sidebar-link">
+                <i class="fa-solid fa-chart-column"></i>
+                <span>Relatórios</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="blh-sidebar-link">
+                <i class="fa-solid fa-gear"></i>
+                <span>Configurações</span>
+              </a>
+            </li>
+
+          </ul>
+
+        </nav>
+
+      </div>
+
+      <!-- FOOTER -->
+      <footer class="blh-sidebar-footer">
+
+        <div class="blh-user">
+
+          <div class="blh-user-avatar">
+            <i class="fa-solid fa-user"></i>
+          </div>
+
+          <div class="blh-user-info">
+            <strong>Dra. Ana Carvalho</strong>
+            <span>Nutricionista</span>
+          </div>
+
+        </div>
+
+        <a href="#" class="blh-logout">
+          <i class="fa-solid fa-arrow-right-from-bracket"></i>
+          <span>Sair do sistema</span>
+        </a>
+
+      </footer>
+
+    </aside>
+
+    <!-- ===================================================
+         MAIN
+    ==================================================== -->
+
+    <main class="blh-main">
+
+      <!-- HEADER -->
+      <header class="blh-page-header">
+
+        <div>
+
+          <h2 class="blh-page-title">
+            Coleta Domiciliar
+          </h2>
+
+          <p class="blh-page-subtitle">
+            Quarta-feira, 16 de maio de 2024 · Zona Oeste
+          </p>
+
+        </div>
+
+        <div class="blh-temperature-indicator">
+          <i class="fa-solid fa-temperature-low"></i>
+          <span>Saída: 2.8°C</span>
+        </div>
+
+      </header>
+
+      <!-- =================================================
+           CONTROLE DE TEMPERATURA
+      ================================================== -->
+
+      <section class="blh-card">
+
+        <h3 class="blh-card-title">
+          Controle de Temperatura da Caixa Térmica
+        </h3>
+
+        <form class="blh-temperature-grid">
+
+          <!-- Campo -->
+          <div class="blh-form-group">
+
+            <label class="blh-form-label">
+              Temp. ao sair do banco
+            </label>
+
+            <div class="blh-input-wrapper">
+
+              <i class="fa-solid fa-temperature-quarter blh-input-icon"></i>
+
+              <input
+                type="number"
+                class="blh-input"
+                value="2.8"
+              />
+
+            </div>
+
+          </div>
+
+          <!-- Campo -->
+          <div class="blh-form-group">
+
+            <label class="blh-form-label">
+              Temp. durante coleta
+            </label>
+
+            <div class="blh-input-wrapper">
+
+              <i class="fa-solid fa-temperature-quarter blh-input-icon"></i>
+
+              <input
+                type="number"
+                class="blh-input"
+                placeholder="°C"
+              />
+
+            </div>
+
+          </div>
+
+          <!-- Campo -->
+          <div class="blh-form-group">
+
+            <label class="blh-form-label">
+              Temp. ao retornar
+            </label>
+
+            <div class="blh-input-wrapper">
+
+              <i class="fa-solid fa-temperature-quarter blh-input-icon"></i>
+
+              <input
+                type="number"
+                class="blh-input"
+                placeholder="°C"
+              />
+
+            </div>
+
+          </div>
+
+        </form>
+
+      </section>
+
+      <!-- =================================================
+           AGENDA
+      ================================================== -->
+
+      <section class="blh-card">
+
+        <div class="blh-agenda-header">
+
+          <h3 class="blh-card-title">
+            Agenda do Dia
+          </h3>
+
+          <span class="blh-agenda-counter">
+            2/5 concluídas
+          </span>
+
+        </div>
+
+        <!-- LISTA -->
+        <ul class="blh-agenda-list">
+
+          <!-- ITEM -->
+          <li class="blh-agenda-item">
+
+            <div class="blh-time">08:30</div>
+
+            <div class="blh-status-icon blh-status-success">
+              <i class="fa-solid fa-check"></i>
+            </div>
+
+            <div>
+
+              <h4 class="blh-client-name">
+                Maria Aparecida Santos
+              </h4>
+
+              <p class="blh-client-address">
+                <i class="fa-solid fa-location-dot"></i>
+                Rua das Acácias, 234 – Jd. Esperança
+              </p>
+
+            </div>
+
+            <div>
+              <span class="blh-badge blh-badge-success">
+                Concluída
+              </span>
+            </div>
+
+            <div class="blh-milk-info">
+              <strong>4 frascos</strong>
+              <span>820 mL</span>
+            </div>
+
+            <div class="blh-arrow">
+              <i class="fa-solid fa-chevron-right"></i>
+            </div>
+
+          </li>
+
+          <!-- ITEM -->
+          <li class="blh-agenda-item">
+
+            <div class="blh-time">09:15</div>
+
+            <div class="blh-status-icon blh-status-success">
+              <i class="fa-solid fa-check"></i>
+            </div>
+
+            <div>
+
+              <h4 class="blh-client-name">
+                Camila Souza Mendes
+              </h4>
+
+              <p class="blh-client-address">
+                <i class="fa-solid fa-location-dot"></i>
+                Av. Brasil, 1102 – Jd. Alvorada
+              </p>
+
+            </div>
+
+            <div>
+              <span class="blh-badge blh-badge-success">
+                Concluída
+              </span>
+            </div>
+
+            <div class="blh-milk-info">
+              <strong>2 frascos</strong>
+              <span>380 mL</span>
+            </div>
+
+            <div class="blh-arrow">
+              <i class="fa-solid fa-chevron-right"></i>
+            </div>
+
+          </li>
+
+          <!-- ITEM -->
+          <li class="blh-agenda-item active">
+
+            <div class="blh-time">10:00</div>
+
+            <div class="blh-status-icon blh-status-info">
+              <i class="fa-regular fa-clock"></i>
+            </div>
+
+            <div>
+
+              <h4 class="blh-client-name">
+                Ana Carolina Oliveira
+              </h4>
+
+              <p class="blh-client-address">
+                <i class="fa-solid fa-location-dot"></i>
+                Rua Presidente Prudente, 87 – Zona Sul
+              </p>
+
+            </div>
+
+            <div>
+              <span class="blh-badge blh-badge-info">
+                Em andamento
+              </span>
+            </div>
+
+            <div></div>
+
+            <div class="blh-arrow">
+              <i class="fa-solid fa-chevron-right"></i>
+            </div>
+
+          </li>
+
+          <!-- ITEM -->
+          <li class="blh-agenda-item">
+
+            <div class="blh-time">11:30</div>
+
+            <div class="blh-status-icon blh-status-pending">
+              <i class="fa-solid fa-circle"></i>
+            </div>
+
+            <div>
+
+              <h4 class="blh-client-name">
+                Patrícia Rodrigues Alves
+              </h4>
+
+              <p class="blh-client-address">
+                <i class="fa-solid fa-location-dot"></i>
+                Estrada Municipal – Zona Rural, Km 14
+              </p>
+
+            </div>
+
+            <div>
+              <span class="blh-badge blh-badge-warning">
+                Pendente
+              </span>
+            </div>
+
+            <div></div>
+
+            <div class="blh-arrow">
+              <i class="fa-solid fa-chevron-right"></i>
+            </div>
+
+          </li>
+
+          <!-- ITEM -->
+          <li class="blh-agenda-item">
+
+            <div class="blh-time">14:00</div>
+
+            <div class="blh-status-icon blh-status-pending">
+              <i class="fa-solid fa-circle"></i>
+            </div>
+
+            <div>
+
+              <h4 class="blh-client-name">
+                Fernanda Costa Pereira
+              </h4>
+
+              <p class="blh-client-address">
+                <i class="fa-solid fa-location-dot"></i>
+                Rua XV de Novembro, 445 – Zona Leste
+              </p>
+
+            </div>
+
+            <div>
+              <span class="blh-badge blh-badge-warning">
+                Pendente
+              </span>
+            </div>
+
+            <div></div>
+
+            <div class="blh-arrow">
+              <i class="fa-solid fa-chevron-right"></i>
+            </div>
+
+          </li>
+
+        </ul>
+
+      </section>
+
+    </main>
+
+  </div>
+
+  <!-- =====================================================
+       JAVASCRIPT
+  ====================================================== -->
+
+
+
+</body>
+</html>

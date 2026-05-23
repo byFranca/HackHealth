@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BLH Marília - Doadoras</title>
+  <link rel="stylesheet" href="assets/doadoras.css">
+
+
+</head>
+
+<body>
+
+  <div class="blh-dashboard-layout">
+
+    <!-- SIDEBAR -->
+    <aside class="blh-sidebar">
+
+      <div class="blh-sidebar-top">
+
+        <div class="blh-logo-area">
+          <div class="blh-logo-image"></div>
+
+          <div class="blh-logo-text">
+            <h1>BLH Marília</h1>
+            <p>Sistema de Gestão</p>
+          </div>
+        </div>
+
+        <nav class="blh-sidebar-nav">
+
+          <a href="#" class="blh-nav-item">
+            <img src="assets/imgs/dashboard.png" alt="imgdashboardf">
+            <span class="blh-nav-text">Dashboard</span>
+          </a>
+
+          <a href="#" class="blh-nav-item blh-nav-item--active">
+            <div class="blh-nav-icon"></div>
+            <span class="blh-nav-text">Doadoras</span>
+          </a>
+
+          <a href="#" class="blh-nav-item">
+            <div class="blh-nav-icon"></div>
+            <span class="blh-nav-text">Coletas Domiciliares</span>
+          </a>
+
+          <a href="#" class="blh-nav-item">
+            <div class="blh-nav-icon"></div>
+            <span class="blh-nav-text">Pasteurização</span>
+          </a>
+
+          <a href="#" class="blh-nav-item">
+            <div class="blh-nav-icon"></div>
+            <span class="blh-nav-text">Estoque de Leite</span>
+          </a>
+
+          <a href="#" class="blh-nav-item">
+            <div class="blh-nav-icon"></div>
+            <span class="blh-nav-text">Solicitações</span>
+          </a>
+
+          <a href="#" class="blh-nav-item">
+            <div class="blh-nav-icon"></div>
+            <span class="blh-nav-text">Entregas</span>
+          </a>
+
+          <a href="#" class="blh-nav-item blh-nav-item--orange">
+            <div class="blh-nav-icon"></div>
+            <span class="blh-nav-text">Rastreabilidade</span>
+          </a>
+
+          <a href="#" class="blh-nav-item">
+            <div class="blh-nav-icon"></div>
+            <span class="blh-nav-text">Relatórios</span>
+          </a>
+
+          <a href="#" class="blh-nav-item">
+            <div class="blh-nav-icon"></div>
+            <span class="blh-nav-text">Configurações</span>
+          </a>
+
+        </nav>
+      </div>
+
+      <div class="blh-sidebar-bottom">
+
+        <div class="blh-user-card">
+          <div class="blh-user-avatar"></div>
+
+          <div class="blh-user-info">
+            <h2>Dra. Ana Carvalho</h2>
+            <p>Nutricionista</p>
+          </div>
+        </div>
+
+        <a href="#" class="blh-logout-button">
+          <div class="blh-nav-icon"></div>
+          <span>Sair do sistema</span>
+        </a>
+
+      </div>
+    </aside>
+
+    <!-- MAIN -->
+    <main class="blh-main-content">
+
+      <header class="blh-page-header">
+
+        <div class="blh-page-title">
+          <h1>Doadoras</h1>
+          <p>6 cadastradas · 5 ativas</p>
+        </div>
+
+        <button class="blh-new-donor-button">
+          + Nova Doadora
+        </button>
+
+      </header>
+
+      <!-- FILTERS -->
+      <section class="blh-filters-section">
+
+        <div class="blh-search-wrapper">
+          <input
+            type="text"
+            class="blh-search-input"
+            placeholder="Buscar doadora..."
+          />
+        </div>
+
+        <select class="blh-filter-select">
+          <option>Todas as regiões</option>
+          <option>Zona Norte</option>
+          <option>Zona Sul</option>
+          <option>Zona Leste</option>
+          <option>Zona Oeste</option>
+        </select>
+
+        <select class="blh-filter-select">
+          <option>Todos os status</option>
+          <option>Ativa</option>
+          <option>Inativa</option>
+        </select>
+
+      </section>
+
+      <!-- TABLE -->
+      <section class="blh-table-container">
+
+        <table class="blh-donors-table">
+
+          <thead>
+            <tr>
+              <th>Doadora</th>
+              <th>Região</th>
+              <th>Tipo de Leite</th>
+              <th>Frascos</th>
+              <th>Volume</th>
+              <th>Status</th>
+              <th></th>
+            </tr>
+          </thead>
+
+          <tbody>
+
+            <tr>
+              <td>
+                <div class="blh-donor-name">Maria Aparecida Santos</div>
+                <div class="blh-donor-id">DOA-001</div>
+              </td>
+
+              <td>Zona Norte</td>
+              <td>Maduro</td>
+              <td><strong>24</strong></td>
+              <td class="blh-volume-text">4.920 mL</td>
+
+              <td>
+                <span class="blh-status-tag blh-status-tag--active">
+                  Ativa
+                </span>
+              </td>
+
+              <td>
+                <img class="eyesdoadora" src="assets/imgs/view.png">
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <div class="blh-donor-name">Ana Carolina Oliveira</div>
+                <div class="blh-donor-id">DOA-002</div>
+              </td>
+
+              <td>Zona Sul</td>
+              <td>Colostro</td>
+              <td><strong>8</strong></td>
+              <td class="blh-volume-text">1.360 mL</td>
+
+              <td>
+                <span class="blh-status-tag blh-status-tag--active">
+                  Ativa
+                </span>
+              </td>
+
+              <td>
+                <img class="eyesdoadora" src="assets/imgs/view.png">
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <div class="blh-donor-name">Fernanda Costa Pereira</div>
+                <div class="blh-donor-id">DOA-003</div>
+              </td>
+
+              <td>Zona Leste</td>
+              <td>Transição</td>
+              <td><strong>16</strong></td>
+              <td class="blh-volume-text">3.200 mL</td>
+
+              <td>
+                <span class="blh-status-tag blh-status-tag--active">
+                  Ativa
+                </span>
+              </td>
+
+              <td>
+                <img class="eyesdoadora" src="assets/imgs/view.png">
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <div class="blh-donor-name">Juliana Moraes Lima</div>
+                <div class="blh-donor-id">DOA-004</div>
+              </td>
+
+              <td>Zona Oeste</td>
+              <td>Hipercalórico</td>
+              <td><strong>31</strong></td>
+              <td class="blh-volume-text">6.820 mL</td>
+
+              <td>
+                <span class="blh-status-tag blh-status-tag--inactive">
+                  Inativa
+                </span>
+              </td>
+
+              <td>
+                <img class="eyesdoadora" src="assets/imgs/view.png">
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <div class="blh-donor-name">Patricia Rodrigues Alves</div>
+                <div class="blh-donor-id">DOA-005</div>
+              </td>
+
+              <td>Zona Rural</td>
+              <td>Maduro</td>
+              <td><strong>19</strong></td>
+              <td class="blh-volume-text">3.990 mL</td>
+
+              <td>
+                <span class="blh-status-tag blh-status-tag--active">
+                  Ativa
+                </span>
+              </td>
+
+              <td>
+                <img class="eyesdoadora" src="assets/imgs/view.png">
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <div class="blh-donor-name">Camila Souza Mendes</div>
+                <div class="blh-donor-id">DOA-006</div>
+              </td>
+
+              <td>Zona Norte</td>
+              <td>Colostro</td>
+              <td><strong>5</strong></td>
+              <td class="blh-volume-text">850 mL</td>
+
+              <td>
+                <span class="blh-status-tag blh-status-tag--active">
+                  Ativa
+                </span>
+              </td>
+
+              <td>
+                <img class="eyesdoadora" src="assets/imgs/view.png">
+              </td>
+            </tr>
+
+          </tbody>
+
+        </table>
+
+      </section>
+
+    </main>
+
+  </div>
+
+  <div class="blh-floating-help"></div>
+
+  <script>
+    const searchInput = document.querySelector(".blh-search-input");
+
+    searchInput.addEventListener("input", () => {
+      console.log("Buscando:", searchInput.value);
+    });
+  </script>
+
+</body>
+</html>

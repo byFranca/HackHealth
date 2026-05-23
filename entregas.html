@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BLH Marília - Entregas e Logística</title>
+    <link rel="stylesheet" href="assets/entregas.css">
+</head>
+<body>
+
+    <div class="app-container">
+        
+        <aside class="sidebar">
+            <div class="logo-area">
+                <div class="logo-icon"></div>
+                <div>
+                    <h1>BLH Marília</h1>
+                    <p>Sistema de Gestão</p>
+                </div>
+            </div>
+
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="#"><i class="icon"></i> Dashboard</a></li>
+                    <li><a href="#"><i class="icon"></i> Doadoras</a></li>
+                    <li><a href="#"><i class="icon"></i> Coletas Domiciliares</a></li>
+                    <li><a href="#"><i class="icon"></i> Pasteurização</a></li>
+                    <li><a href="#"><i class="icon"></i> Estoque de Leite</a></li>
+                    <li><a href="#"><i class="icon"></i> Solicitações</a></li>
+                    <li class="active"><a href="#"><i class="icon"></i> Entregas</a></li>
+                    <li><a href="#" class="highlight"><i class="icon"></i> Rastreabilidade</a></li>
+                    <li><a href="#"><i class="icon"></i> Relatórios</a></li>
+                    <li><a href="#"><i class="icon"></i> Configurações</a></li>
+                </ul>
+            </nav>
+
+            <footer class="user-profile">
+                <div class="user-info">
+                    <div class="avatar"></div>
+                    <div>
+                        <h3>Dra. Ana Carvalho</h3>
+                        <p>Nutricionista</p>
+                    </div>
+                </div>
+                <a href="#" class="btn-logout">Sair do sistema</a>
+            </footer>
+        </aside>
+
+        <main class="main-content">
+            
+            <header class="content-header">
+                <div>
+                    <h2>Entregas e Logística</h2>
+                    <p class="subtitle">23 de maio de 2026 • 5 entregas programadas</p>
+                </div>
+                <button class="btn-primary">+ Nova Entrega</button>
+            </header>
+
+            <section class="kpi-grid">
+                <div class="card-kpi">
+                    <div class="kpi-icon icon-blue"></div>
+                    <div>
+                        <span class="kpi-value">5</span>
+                        <p class="kpi-label">Agendadas</p>
+                    </div>
+                </div>
+                <div class="card-kpi">
+                    <div class="kpi-icon icon-green"></div>
+                    <div>
+                        <span class="kpi-value">2</span>
+                        <p class="kpi-label">Entregues</p>
+                    </div>
+                </div>
+                <div class="card-kpi">
+                    <div class="kpi-icon icon-cyan"></div>
+                    <div>
+                        <span class="kpi-value">1</span>
+                        <p class="kpi-label">Em Transporte</p>
+                    </div>
+                </div>
+                <div class="card-kpi">
+                    <div class="kpi-icon icon-orange"></div>
+                    <div>
+                        <span class="kpi-value">2</span>
+                        <p class="kpi-label">Pendentes</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="data-section">
+                <h3>Entregas do Dia</h3>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>HOSPITAL</th>
+                                <th>FRASCOS</th>
+                                <th>SAÍDA</th>
+                                <th>ENTREGA</th>
+                                <th>TEMP. CAIXA</th>
+                                <th>RESPONSÁVEL</th>
+                                <th>ASSINATURA RECEB.</th>
+                                <th>STATUS</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><a href="#" class="id-link">ENT-0445</a></td>
+                                <td>Santa Casa de Misericórdia</td>
+                                <td class="text-bold">5</td>
+                                <td>07:30</td>
+                                <td>08:15</td>
+                                <td class="temp-alert">4.2°C</td>
+                                <td>Carlos Eduardo S.</td>
+                                <td class="signature">Enf. Marcos Vinícius</td>
+                                <td><span class="badge badge-success">Entregue</span></td>
+                            </tr>
+                            <tr>
+                                <td><a href="#" class="id-link">ENT-0446</a></td>
+                                <td>HC – Marília</td>
+                                <td class="text-bold">8</td>
+                                <td>09:00</td>
+                                <td>—</td>
+                                <td class="temp-normal">3.8°C</td>
+                                <td>Roberto Lima</td>
+                                <td>—</td>
+                                <td><span class="badge badge-info">Em Transporte</span></td>
+                            </tr>
+                            <tr>
+                                <td><a href="#" class="id-link">ENT-0447</a></td>
+                                <td>UPA Zona Norte</td>
+                                <td class="text-bold">2</td>
+                                <td>11:00</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>Carlos Eduardo S.</td>
+                                <td>—</td>
+                                <td><span class="badge badge-warning">Pendente</span></td>
+                            </tr>
+                            <tr>
+                                <td><a href="#" class="id-link">ENT-0448</a></td>
+                                <td>Santa Casa – Maternidade</td>
+                                <td class="text-bold">4</td>
+                                <td>13:00</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>Roberto Lima</td>
+                                <td>—</td>
+                                <td><span class="badge badge-warning">Pendente</span></td>
+                            </tr>
+                            <tr>
+                                <td><a href="#" class="id-link">ENT-0449</a></td>
+                                <td>HC – Marília (UTI Neo)</td>
+                                <td class="text-bold">6</td>
+                                <td>07:30</td>
+                                <td>08:10</td>
+                                <td class="temp-normal">4.0°C</td>
+                                <td>Carlos Eduardo S.</td>
+                                <td class="signature">Enf. Sandra M.</td>
+                                <td><span class="badge badge-success">Entregue</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section class="data-section">
+                <h3>Controle de Devolução de Caixas Térmicas</h3>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>CAIXA</th>
+                                <th>HOSPITAL</th>
+                                <th>DATA ENVIO</th>
+                                <th>PRAZO DEVOLUÇÃO</th>
+                                <th>STATUS</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><a href="#" class="id-link">CX-014</a></td>
+                                <td>Santa Casa de Misericórdia</td>
+                                <td>09/05/2024</td>
+                                <td>16/05/2024</td>
+                                <td><span class="badge badge-warning">Pendente</span></td>
+                            </tr>
+                            <tr>
+                                <td><a href="#" class="id-link">CX-011</a></td>
+                                <td>HC – Marília</td>
+                                <td>08/05/2024</td>
+                                <td>15/05/2024</td>
+                                <td><span class="badge badge-danger">Reprovado</span></td>
+                            </tr>
+                            <tr>
+                                <td><a href="#" class="id-link">CX-013</a></td>
+                                <td>UPA Zona Norte</td>
+                                <td>10/05/2024</td>
+                                <td>17/05/2024</td>
+                                <td><span class="badge badge-success">Entregue</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+</body>
+</html>

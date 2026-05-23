@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>Solicitações de Leite - BLH Marília</title>
+
+  <!-- ======================================================
+       GOOGLE FONTS
+  ======================================================= -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- ======================================================
+       FONT AWESOME
+  ======================================================= -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  />
+<link rel="stylesheet" href="assets/solicitacoes.css"
+  
+</head>
+
+<body>
+
+  <div class="layout">
+
+    <!-- ====================================================
+         SIDEBAR
+    ===================================================== -->
+    <aside class="sidebar">
+
+      <div>
+
+        <!-- HEADER -->
+        <header class="sidebar-header">
+
+          <div class="logo">
+            <i class="fa-solid fa-user-doctor"></i>
+          </div>
+
+          <div class="brand">
+            <h1>BLH Marília</h1>
+            <span>Sistema de Gestão</span>
+          </div>
+
+        </header>
+
+        <!-- MENU -->
+        <nav aria-label="Menu principal">
+
+          <ul class="menu">
+
+            <li>
+              <a href="#">
+                <i class="fa-solid fa-table-columns"></i>
+                <span>Dashboard</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="#">
+                <i class="fa-regular fa-heart"></i>
+                <span>Doadoras</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="#">
+                <i class="fa-solid fa-location-dot"></i>
+                <span>Coletas Domiciliares</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="#">
+                <i class="fa-solid fa-flask"></i>
+                <span>Pasteurização</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="#">
+                <i class="fa-solid fa-cube"></i>
+                <span>Estoque de Leite</span>
+              </a>
+            </li>
+
+            <li class="active">
+              <a href="#">
+                <i class="fa-regular fa-file-lines"></i>
+                <span>Solicitações</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="#">
+                <i class="fa-solid fa-truck"></i>
+                <span>Entregas</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="#">
+                <i class="fa-solid fa-code-branch"></i>
+                <span>Rastreabilidade</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="#">
+                <i class="fa-solid fa-chart-column"></i>
+                <span>Relatórios</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="#">
+                <i class="fa-solid fa-gear"></i>
+                <span>Configurações</span>
+              </a>
+            </li>
+
+          </ul>
+
+        </nav>
+
+      </div>
+
+      <!-- FOOTER -->
+      <footer class="sidebar-footer">
+
+        <div class="user">
+
+          <div class="user-avatar">
+            <i class="fa-regular fa-user"></i>
+          </div>
+
+          <div class="user-info">
+            <strong>Dra. Ana Carvalho</strong>
+            <span>Nutricionista</span>
+          </div>
+
+        </div>
+
+        <a href="#" class="logout">
+          <i class="fa-solid fa-arrow-right-from-bracket"></i>
+          <span>Sair do sistema</span>
+        </a>
+
+      </footer>
+
+    </aside>
+
+    <!-- ====================================================
+         MAIN CONTENT
+    ===================================================== -->
+    <main>
+
+      <!-- ==================================================
+           HEADER
+      =================================================== -->
+      <section class="page-header">
+
+        <div class="page-title">
+
+          <h2>Solicitações de Leite</h2>
+
+          <p>
+            Substituição do sistema de pedidos por telefone
+          </p>
+
+        </div>
+
+        <button class="btn-primary" id="newRequestBtn">
+
+          <i class="fa-solid fa-plus"></i>
+
+          Nova Solicitação
+
+        </button>
+
+      </section>
+
+      <!-- ==================================================
+           REQUEST LIST
+      =================================================== -->
+      <section class="requests">
+
+        <!-- ================================================
+             CARD 01
+        ================================================= -->
+        <article class="request-card">
+
+          <div class="request-body">
+
+            <div class="request-top">
+
+              <div>
+
+                <div class="request-id">
+
+                  <span class="code">
+                    SOL-0891
+                  </span>
+
+                  <span class="priority priority-high">
+                    Alta
+                  </span>
+
+                </div>
+
+                <h3 class="patient-name">
+                  Pedro Henrique M.
+                </h3>
+
+                <p class="hospital">
+                  Santa Casa de Misericórdia
+                </p>
+
+              </div>
+
+              <span class="status status-separacao">
+                Em Separação
+              </span>
+
+            </div>
+
+            <div class="request-footer">
+
+              <div class="info-item">
+                <i class="fa-solid fa-droplet"></i>
+                <span>Colostro</span>
+              </div>
+
+              <div class="info-item">
+                <i class="fa-regular fa-cube"></i>
+                <span>3 frascos</span>
+              </div>
+
+              <div class="info-item">
+                <i class="fa-regular fa-calendar"></i>
+                <span>16/05/2024</span>
+              </div>
+
+            </div>
+
+          </div>
+
+        </article>
+
+        <!-- ================================================
+             CARD 02
+        ================================================= -->
+        <article class="request-card">
+
+          <div class="request-body">
+
+            <div class="request-top">
+
+              <div>
+
+                <div class="request-id">
+
+                  <span class="code">
+                    SOL-0892
+                  </span>
+
+                  <span class="priority priority-normal">
+                    Normal
+                  </span>
+
+                </div>
+
+                <h3 class="patient-name">
+                  Laura Beatriz S.
+                </h3>
+
+                <p class="hospital">
+                  Hospital das Clínicas – Marília
+                </p>
+
+              </div>
+
+              <span class="status status-solicitado">
+                Solicitado
+              </span>
+
+            </div>
+
+            <div class="request-footer">
+
+              <div class="info-item">
+                <i class="fa-solid fa-droplet"></i>
+                <span>Maduro</span>
+              </div>
+
+              <div class="info-item">
+                <i class="fa-regular fa-cube"></i>
+                <span>5 frascos</span>
+              </div>
+
+              <div class="info-item">
+                <i class="fa-regular fa-calendar"></i>
+                <span>16/05/2024</span>
+              </div>
+
+            </div>
+
+          </div>
+
+        </article>
+
+        <!-- ================================================
+             CARD 03
+        ================================================= -->
+        <article class="request-card">
+
+          <div class="request-body">
+
+            <div class="request-top">
+
+              <div>
+
+                <div class="request-id">
+
+                  <span class="code">
+                    SOL-0893
+                  </span>
+
+                  <span class="priority priority-urgent">
+                    Urgente
+                  </span>
+
+                </div>
+
+                <h3 class="patient-name">
+                  Mateus A. R.
+                </h3>
+
+                <p class="hospital">
+                  UPA Zona Norte
+                </p>
+
+              </div>
+
+              <span class="status status-entregue">
+                Entregue
+              </span>
+
+            </div>
+
+            <div class="request-footer">
+
+              <div class="info-item">
+                <i class="fa-solid fa-droplet"></i>
+                <span>Hipercalórico</span>
+              </div>
+
+              <div class="info-item">
+                <i class="fa-regular fa-cube"></i>
+                <span>2 frascos</span>
+              </div>
+
+              <div class="info-item">
+                <i class="fa-regular fa-calendar"></i>
+                <span>15/05/2024</span>
+              </div>
+
+            </div>
+
+          </div>
+
+        </article>
+
+        <!-- ================================================
+             CARD 04
+        ================================================= -->
+        <article class="request-card">
+
+          <div class="request-body">
+
+            <div class="request-top">
+
+              <div>
+
+                <div class="request-id">
+
+                  <span class="code">
+                    SOL-0894
+                  </span>
+
+                  <span class="priority priority-normal">
+                    Normal
+                  </span>
+
+                </div>
+
+                <h3 class="patient-name">
+                  Isabela F. C.
+                </h3>
+
+                <p class="hospital">
+                  Santa Casa de Misericórdia
+                </p>
+
+              </div>
+
+              <span class="status status-transporte">
+                Em Transporte
+              </span>
+
+            </div>
+
+            <div class="request-footer">
+
+              <div class="info-item">
+                <i class="fa-solid fa-droplet"></i>
+                <span>Transição</span>
+              </div>
+
+              <div class="info-item">
+                <i class="fa-regular fa-cube"></i>
+                <span>4 frascos</span>
+              </div>
+
+              <div class="info-item">
+                <i class="fa-regular fa-calendar"></i>
+                <span>16/05/2024</span>
+              </div>
+
+            </div>
+
+          </div>
+
+        </article>
+
+      </section>
+
+    </main>
+
+  </div>
+
+  <!-- ======================================================
+       FLOAT BUTTON
+  ======================================================= -->
+  <button class="help-button" aria-label="Ajuda">
+    ?
+  </button>
+
+  <!-- ======================================================
+       JAVASCRIPT
+  ======================================================= -->
+  <script>
+
+    /* ======================================================
+       BOTÃO NOVA SOLICITAÇÃO
+    ======================================================= */
+    const newRequestBtn =
+      document.getElementById('newRequestBtn');
+
+    newRequestBtn.addEventListener('click', () => {
+
+      alert('Abrir formulário de nova solicitação.');
+
+    });
+
+  </script>
+
+</body>
+</html>

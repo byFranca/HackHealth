@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pasteurização - BLH Marília</title>
+
+  <!-- Fonte -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- Ícones -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  />
+<link rel="stylesheet" href="assets/pasteurizacao.css"
+
+</head>
+
+<body>
+
+  <div class="layout">
+
+    <!-- =====================================================
+         SIDEBAR
+    ====================================================== -->
+    <aside class="sidebar">
+
+      <div class="sidebar-top">
+
+        <!-- Marca -->
+        <header class="brand">
+          <div class="brand-avatar">
+            <i class="fa-solid fa-user-doctor"></i>
+          </div>
+
+          <div class="brand-info">
+            <h1>BLH Marília</h1>
+            <span>Sistema de Gestão</span>
+          </div>
+        </header>
+
+        <!-- Navegação -->
+        <nav aria-label="Menu principal">
+
+          <ul class="menu">
+
+            <li>
+              <a href="#">
+                <i class="fa-solid fa-table-columns"></i>
+                <span>Dashboard</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="#">
+                <i class="fa-regular fa-heart"></i>
+                <span>Doadoras</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="#">
+                <i class="fa-solid fa-location-dot"></i>
+                <span>Coletas Domiciliares</span>
+              </a>
+            </li>
+
+            <li class="active">
+              <a href="#">
+                <i class="fa-solid fa-flask"></i>
+                <span>Pasteurização</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="#">
+                <i class="fa-solid fa-cube"></i>
+                <span>Estoque de Leite</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="#">
+                <i class="fa-regular fa-file-lines"></i>
+                <span>Solicitações</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="#">
+                <i class="fa-solid fa-truck"></i>
+                <span>Entregas</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="#">
+                <i class="fa-solid fa-code-branch"></i>
+                <span>Rastreabilidade</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="#">
+                <i class="fa-solid fa-chart-column"></i>
+                <span>Relatórios</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="#">
+                <i class="fa-solid fa-gear"></i>
+                <span>Configurações</span>
+              </a>
+            </li>
+
+          </ul>
+        </nav>
+      </div>
+
+      <!-- Footer -->
+      <footer class="sidebar-footer">
+
+        <div class="user-card">
+          <div class="user-avatar">
+            <i class="fa-regular fa-user"></i>
+          </div>
+
+          <div class="user-info">
+            <strong>Dra. Ana Carvalho</strong>
+            <span>Nutricionista</span>
+          </div>
+        </div>
+
+        <a href="#" class="logout">
+          <i class="fa-solid fa-arrow-right-from-bracket"></i>
+          <span>Sair do sistema</span>
+        </a>
+
+      </footer>
+
+    </aside>
+
+    <!-- =====================================================
+         CONTEÚDO PRINCIPAL
+    ====================================================== -->
+    <main>
+
+      <!-- Topo -->
+      <section class="topbar">
+
+        <div class="page-title">
+          <h2>Pasteurização</h2>
+          <p>Controle laboratorial dos lotes de leite</p>
+        </div>
+
+        <button class="filter-btn">
+          <i class="fa-solid fa-filter"></i>
+          Filtros
+        </button>
+
+      </section>
+
+      <!-- Fluxo -->
+      <section class="card">
+
+        <h3 class="card-title">Fluxo do Processo</h3>
+
+        <div class="flow-container">
+
+          <div class="flow-step">
+            <div class="flow-number gray">1</div>
+            <span class="flow-label">Coletado</span>
+          </div>
+
+          <div class="flow-arrow">
+            <i class="fa-solid fa-arrow-right"></i>
+          </div>
+
+          <div class="flow-step">
+            <div class="flow-number blue">2</div>
+            <span class="flow-label">Recebido</span>
+          </div>
+
+          <div class="flow-arrow">
+            <i class="fa-solid fa-arrow-right"></i>
+          </div>
+
+          <div class="flow-step">
+            <div class="flow-number purple">3</div>
+            <span class="flow-label">Em Análise</span>
+          </div>
+
+          <div class="flow-arrow">
+            <i class="fa-solid fa-arrow-right"></i>
+          </div>
+
+          <div class="flow-step">
+            <div class="flow-number orange">4</div>
+            <span class="flow-label">Pasteurizado</span>
+          </div>
+
+          <div class="flow-arrow">
+            <i class="fa-solid fa-arrow-right"></i>
+          </div>
+
+          <div class="flow-step">
+            <div class="flow-number green">5</div>
+            <span class="flow-label">Aprovado</span>
+          </div>
+
+          <div class="flow-arrow">
+            <i class="fa-solid fa-arrow-right"></i>
+          </div>
+
+          <div class="flow-step">
+            <div class="flow-number teal">6</div>
+            <span class="flow-label">Pronto</span>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Tabela -->
+      <section class="card">
+
+        <div class="table-header">
+
+          <h3 class="card-title">Lotes em Processo</h3>
+
+          <button class="new-lot-btn">
+            <i class="fa-solid fa-plus"></i>
+            Novo Lote
+          </button>
+
+        </div>
+
+        <div class="table-wrapper">
+
+          <table>
+
+            <thead>
+              <tr>
+                <th>Lote</th>
+                <th>Doadora</th>
+                <th>Tipo</th>
+                <th>Frascos</th>
+                <th>Volume</th>
+                <th>Coleta</th>
+                <th>Acidez</th>
+                <th>Microbiologia</th>
+                <th>Responsável</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+
+            <tbody>
+
+              <tr>
+                <td>
+                  <a href="#" class="lot-link">LOTE-247</a>
+                </td>
+
+                <td>Maria Aparecida</td>
+
+                <td>Maduro</td>
+
+                <td class="bold">4</td>
+
+                <td>820 mL</td>
+
+                <td>15/05/2024 08:30</td>
+
+                <td>4.8 Dornic</td>
+
+                <td class="negative">Negativo</td>
+
+                <td>Dra. Ana Carvalho</td>
+
+                <td>
+                  <span class="badge badge-success">
+                    Aprovado
+                  </span>
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <a href="#" class="lot-link">LOTE-248</a>
+                </td>
+
+                <td>Ana Carolina</td>
+
+                <td>Colostro</td>
+
+                <td class="bold">2</td>
+
+                <td>380 mL</td>
+
+                <td>15/05/2024 10:00</td>
+
+                <td>—</td>
+
+                <td>—</td>
+
+                <td>Dra. Ana Carvalho</td>
+
+                <td>
+                  <span class="badge badge-info">
+                    Em Análise
+                  </span>
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <a href="#" class="lot-link">LOTE-249</a>
+                </td>
+
+                <td>Fernanda Costa</td>
+
+                <td>Transição</td>
+
+                <td class="bold">3</td>
+
+                <td>640 mL</td>
+
+                <td>14/05/2024 14:00</td>
+
+                <td>9.1 Dornic</td>
+
+                <td class="positive">Positivo</td>
+
+                <td>Dra. Beatriz Santos</td>
+
+                <td>
+                  <span class="badge badge-danger">
+                    Reprovado
+                  </span>
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <a href="#" class="lot-link">LOTE-250</a>
+                </td>
+
+                <td>Camila Souza</td>
+
+                <td>Colostro</td>
+
+                <td class="bold">2</td>
+
+                <td>380 mL</td>
+
+                <td>15/05/2024 09:15</td>
+
+                <td>—</td>
+
+                <td>—</td>
+
+                <td>—</td>
+
+                <td>
+                  <span class="badge badge-warning">
+                    Pendente
+                  </span>
+                </td>
+              </tr>
+
+            </tbody>
+
+          </table>
+
+        </div>
+
+      </section>
+
+    </main>
+
+  </div>
+
+  <!-- Botão flutuante -->
+  <button class="floating-help" aria-label="Ajuda">
+    ?
+  </button>
+
+  <!-- =======================================================
+       JAVASCRIPT
+       Apenas interações básicas demonstrativas
+  ======================================================== -->
+  <script>
+    // Exemplo de ação do botão de filtros
+    const filterBtn = document.querySelector('.filter-btn');
+
+    filterBtn.addEventListener('click', () => {
+      alert('Abrir painel de filtros');
+    });
+
+    // Exemplo do botão novo lote
+    const newLotBtn = document.querySelector('.new-lot-btn');
+
+    newLotBtn.addEventListener('click', () => {
+      alert('Criar novo lote');
+    });
+  </script>
+
+</body>
+</html>
